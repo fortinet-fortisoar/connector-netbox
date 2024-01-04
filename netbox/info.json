@@ -134,6 +134,36 @@
       },
       "parameters": [
         {
+          "title": "IDs",
+          "name": "id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of IDs which you want to fetch.",
+          "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Filter Query String",
+          "name": "q",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the query string with which you want to filter the results.",
+          "description": "Specify the query string with which you want to filter the results."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
+        },
+        {
           "title": "Order by Field",
           "name": "ordering",
           "visible": true,
@@ -363,28 +393,28 @@
           "editable": true,
           "type": "json",
           "value": {
-            "address": "string",
+            "address": "",
             "vrf": 0,
             "tenant": 0,
-            "status": "active",
-            "role": "loopback",
-            "assigned_object_type": "string",
-            "assigned_object_id": 9223372036854776000,
+            "status": "",
+            "role": "",
+            "assigned_object_type": "",
+            "assigned_object_id": 0,
             "nat_inside": 0,
-            "dns_name": "*.G7tafc4lbh4wzM6rk8u4RVrwSZQjKHUkopm6odkzY7ao3A5D6ZBtPlhdsXOVwGSq3H9vuWbb.D5EWQI0yFjpnkXiBKJpSObjpNovFX8-.F4VlX_dXq0QVuGYb6vCfdm.fn8ByqgCQBiD44X2qBoT6bQ_0ziYqaTedzFD4UK9lxhrh9ay_m0cHf9u5FYiUjRkEMIEcSEPRvlp.KR8hmwgztO7ELv-b.W4uo1ZOWY99FKQfaztOyjuYb2O6j4OE",
-            "description": "string",
-            "comments": "string",
+            "dns_name": "",
+            "description": "",
+            "comments": "",
             "tags": [
               {
-                "name": "string",
-                "slug": "2W0EKGrW0_UEHCIpMZbnekY",
-                "color": "131f61"
+                "name": "",
+                "slug": "",
+                "color": ""
               }
             ],
             "custom_fields": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
             }
           },
           "tooltip": "Specify the fields and field values that you want to update in IP address object on Netbox instance.",
@@ -500,6 +530,36 @@
         ]
       },
       "parameters": [
+        {
+          "title": "IDs",
+          "name": "id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of IDs which you want to fetch.",
+          "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Filter Query String",
+          "name": "q",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the query string with which you want to filter the results.",
+          "description": "Specify the query string with which you want to filter the results."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
+        },
         {
           "title": "Order by Field",
           "name": "ordering",
@@ -732,28 +792,28 @@
           "editable": true,
           "type": "json",
           "value": {
-            "prefix": "string",
+            "prefix": "",
             "site": 0,
             "vrf": 0,
             "tenant": 0,
             "vlan": 0,
-            "status": "container",
+            "status": "",
             "role": 0,
             "is_pool": true,
             "mark_utilized": true,
-            "description": "string",
-            "comments": "string",
+            "description": "",
+            "comments": "",
             "tags": [
               {
-                "name": "string",
-                "slug": "spEKInRycT7Qbi1Gm756vSAmi0aBz8TRFzLYzwSXK5eYKpwkV5-U",
-                "color": "e784e1"
+                "name": "",
+                "slug": "",
+                "color": ""
               }
             ],
             "custom_fields": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
             }
           },
           "tooltip": "Specify the fields and field values that you want to update in Prefix object on Netbox instance.",
@@ -893,6 +953,46 @@
         ]
       },
       "parameters": [
+        {
+          "title": "IDs",
+          "name": "id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of IDs which you want to fetch.",
+          "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the query string with which you want to filter the results.",
+          "description": "Specify the query string with which you want to filter the results."
+        },
+        {
+          "title": "Filter Query String",
+          "name": "q",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the query string with which you want to filter the results.",
+          "description": "Specify the query string with which you want to filter the results."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
+        },
         {
           "title": "Order by Field",
           "name": "ordering",
@@ -1149,8 +1249,8 @@
           "editable": true,
           "type": "json",
           "value": {
-            "name": "string",
-            "status": "offline",
+            "name": "",
+            "status": "",
             "site": 0,
             "cluster": 0,
             "device": 0,
@@ -1159,23 +1259,23 @@
             "platform": 0,
             "primary_ip4": 0,
             "primary_ip6": 0,
-            "vcpus": 9999,
-            "memory": 2147483647,
-            "disk": 2147483647,
-            "description": "string",
-            "comments": "string",
-            "local_context_data": "string",
+            "vcpus": 0,
+            "memory": 0,
+            "disk": 0,
+            "description": "",
+            "comments": "",
+            "local_context_data": "",
             "tags": [
               {
-                "name": "string",
-                "slug": "M3jqVLvtVbsUpqe938McwKqfVDiOEmfrUITcPIXhvkXLLM8sddvNocRCgDkwdciiXDbXJJkBTMukQoYx5akuyRo9jjPAm4rS3x",
-                "color": "bc57c8"
+                "name": "",
+                "slug": "",
+                "color": ""
               }
             ],
             "custom_fields": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
             }
           },
           "tooltip": "Specify the fields and field values that you want to update in VM object on Netbox instance.",
@@ -1306,6 +1406,36 @@
         ]
       },
       "parameters": [
+        {
+          "title": "IDs",
+          "name": "id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of IDs which you want to fetch.",
+          "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Filter Query String",
+          "name": "q",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the query string with which you want to filter the results.",
+          "description": "Specify the query string with which you want to filter the results."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
+        },
         {
           "title": "Order by Field",
           "name": "ordering",
@@ -1568,40 +1698,40 @@
           "editable": true,
           "type": "json",
           "value": {
-            "name": "string",
-            "facility_id": "string",
+            "name": "",
+            "facility_id": "",
             "site": 0,
             "location": 0,
             "tenant": 0,
-            "status": "reserved",
+            "status": "",
             "role": 0,
-            "serial": "string",
-            "asset_tag": "string",
-            "type": "2-post-frame",
-            "width": 10,
-            "u_height": 100,
-            "starting_unit": 32767,
-            "weight": 999999,
-            "max_weight": 2147483647,
-            "weight_unit": "kg",
+            "serial": "",
+            "asset_tag": "",
+            "type": "",
+            "width": 0,
+            "u_height": 0,
+            "starting_unit": 0,
+            "weight": 0,
+            "max_weight": 0,
+            "weight_unit": "",
             "desc_units": true,
-            "outer_width": 32767,
-            "outer_depth": 32767,
-            "outer_unit": "mm",
-            "mounting_depth": 32767,
-            "description": "string",
-            "comments": "string",
+            "outer_width": 0,
+            "outer_depth": 0,
+            "outer_unit": "",
+            "mounting_depth": 0,
+            "description": "",
+            "comments": "",
             "tags": [
               {
-                "name": "string",
-                "slug": "wjLRRczXxicOlIqjbOPL8-kw51lcjU5M-vNYt7-xbHTILs3GXQNYj1WcOppTR9hgwQW91fgsILDUHBjNJPU",
-                "color": "88cbac"
+                "name": "",
+                "slug": "",
+                "color": ""
               }
             ],
             "custom_fields": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
             }
           },
           "tooltip": "Specify the fields and field values that you want to update in VM object on Netbox instance.",
@@ -1822,6 +1952,36 @@
         ]
       },
       "parameters": [
+        {
+          "title": "IDs",
+          "name": "id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of IDs which you want to fetch.",
+          "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Filter Query String",
+          "name": "q",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the query string with which you want to filter the results.",
+          "description": "Specify the query string with which you want to filter the results."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
+        },
         {
           "title": "Order by Field",
           "name": "ordering",
@@ -2264,44 +2424,44 @@
           "editable": true,
           "type": "json",
           "value": {
-            "name": "string",
+            "name": "",
             "device_type": 0,
             "role": 0,
             "tenant": 0,
             "platform": 0,
-            "serial": "string",
-            "asset_tag": "string",
+            "serial": "",
+            "asset_tag": "",
             "site": 0,
             "location": 0,
             "rack": 0,
-            "position": 999,
-            "face": "front",
-            "latitude": 99,
-            "longitude": 999,
-            "status": "offline",
-            "airflow": "front-to-rear",
+            "position": 0,
+            "face": "",
+            "latitude": 0,
+            "longitude": 0,
+            "status": "",
+            "airflow": "",
             "primary_ip4": 0,
             "primary_ip6": 0,
             "oob_ip": 0,
             "cluster": 0,
             "virtual_chassis": 0,
-            "vc_position": 255,
-            "vc_priority": 255,
-            "description": "string",
-            "comments": "string",
+            "vc_position": 0,
+            "vc_priority": 0,
+            "description": "",
+            "comments": "",
             "config_template": 0,
-            "local_context_data": "string",
+            "local_context_data": "",
             "tags": [
               {
-                "name": "string",
-                "slug": "TuDE4",
-                "color": "4ec814"
+                "name": "",
+                "slug": "",
+                "color": ""
               }
             ],
             "custom_fields": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
             }
           },
           "tooltip": "Specify the fields and field values that you want to update in VM object on Netbox instance.",
@@ -2402,6 +2562,36 @@
         ]
       },
       "parameters": [
+        {
+          "title": "IDs",
+          "name": "id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of IDs which you want to fetch.",
+          "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Filter Query String",
+          "name": "q",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the query string with which you want to filter the results.",
+          "description": "Specify the query string with which you want to filter the results."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
+        },
         {
           "title": "Order by Field",
           "name": "ordering",
@@ -2604,38 +2794,38 @@
           "editable": true,
           "type": "json",
           "value": {
-            "type": "cat3",
+            "type": "",
             "a_terminations": [
               {
-                "object_type": "string",
+                "object_type": "",
                 "object_id": 0
               }
             ],
             "b_terminations": [
               {
-                "object_type": "string",
+                "object_type": "",
                 "object_id": 0
               }
             ],
-            "status": "connected",
+            "status": "",
             "tenant": 0,
-            "label": "string",
-            "color": "e1af95",
-            "length": 999999,
-            "length_unit": "km",
-            "description": "string",
-            "comments": "string",
+            "label": "",
+            "color": "",
+            "length": 0,
+            "length_unit": "",
+            "description": "",
+            "comments": "",
             "tags": [
               {
-                "name": "string",
-                "slug": "xBZHWF6-1447sbDet94X9alWJ8QNZZugovO0LzP",
-                "color": "26f083"
+                "name": "",
+                "slug": "",
+                "color": ""
               }
             ],
             "custom_fields": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
             }
           },
           "tooltip": "Specify the fields and field values that you want to update in Cable object on Netbox instance.",

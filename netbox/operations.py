@@ -14,9 +14,9 @@ logger = get_logger('netbox')
 class Netbox:
     def __init__(self, config):
         self.server_url = config.get('server_url')
-        if not self.server_url.startswith('https://'):
+        if not (self.server_url.startswith('https://') or self.server_url.startswith('http://')):
             self.server_url = 'https://' + self.server_url
-        self.server_url.strip('/')
+        self.server_url = self.server_url.strip('/')
         self.api_key = config.get('api_key')
         self.verify_ssl = config.get('verify_ssl')
 
@@ -26,18 +26,18 @@ class Netbox:
             logger.info('Executing url {}'.format(url))
             headers = {'Authorization': f"Token {self.api_key}", 'Content-Type': 'application/json'}
 
-            # # CURL UTILS CODE
-            # try:
-            #     from connectors.debug_utils.curl_script import make_curl
-            #     make_curl(method, endpoint, headers=headers, params=params, data=data, verify_ssl=self.verify_ssl)
-            # except Exception as err:
-            #     logger.error(f"Error in curl utils: {str(err)}")
+            # CURL UTILS CODE
+            try:
+                from connectors.debug_utils.curl_script import make_curl
+                make_curl(method, endpoint, headers=headers, params=params, data=data, verify_ssl=self.verify_ssl)
+            except Exception as err:
+                logger.error(f"Error in curl utils: {str(err)}")
 
             response = requests.request(method, url, params=params, files=files, data=data, headers=headers,
                                         verify=self.verify_ssl)
             if response.ok:
                 logger.info('successfully get response for url {}'.format(url))
-                if method == 'delete':
+                if method.lower() == 'delete':
                     return response
                 else:
                     return response.json()
@@ -386,7 +386,7 @@ def _check_health(config):
     try:
         tg = Netbox(config)
         endpoint = '/api/dcim/sites/'
-        response = tg.make_request(endpoint=endpoint)
+        response = tg.make_request(endpoint=endpoint, params={'limit': 5})
         if response:
             logger.info("Connector Available")
             return True
