@@ -1,12 +1,13 @@
 """
 Copyright start
 MIT License
-Copyright (c) 2023 Fortinet Inc
+Copyright (c) 2024 Fortinet Inc
 Copyright end
 """
 
 import requests
 from connectors.core.connector import get_logger, ConnectorError
+from .constants import *
 
 logger = get_logger('netbox')
 
@@ -75,9 +76,7 @@ def get_ip_address_list(config: dict, params: dict):
     try:
         nb = Netbox(config)
         params = _build_payload(params)
-        if params.get("other_fields") is not None:
-            other_fields = params.pop("other_fields")
-            params.update(other_fields)
+
 
         endpoint = f'/api/ipam/ip-addresses/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
@@ -127,10 +126,6 @@ def get_prefix_list(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        if params.get("other_fields") is not None:
-            other_fields = params.pop("other_fields")
-            params.update(other_fields)
-
         endpoint = '/api/ipam/prefixes/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
     except Exception as err:
@@ -178,10 +173,6 @@ def get_vm_list(config: dict, params: dict):
     try:
         nb = Netbox(config)
         params = _build_payload(params)
-
-        if params.get("other_fields") is not None:
-            other_fields = params.pop("other_fields")
-            params.update(other_fields)
 
         endpoint = '/api/virtualization/virtual-machines/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
@@ -231,10 +222,6 @@ def get_rack_list(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        if params.get("other_fields") is not None:
-            other_fields = params.pop("other_fields")
-            params.update(other_fields)
-
         endpoint = '/api/dcim/racks/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
     except Exception as err:
@@ -283,10 +270,6 @@ def get_device_list(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        if params.get("other_fields") is not None:
-            other_fields = params.pop("other_fields")
-            params.update(other_fields)
-
         endpoint = '/api/dcim/devices/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
     except Exception as err:
@@ -334,10 +317,6 @@ def get_cable_list(config: dict, params: dict):
     try:
         nb = Netbox(config)
         params = _build_payload(params)
-
-        if params.get("other_fields") is not None:
-            other_fields = params.pop("other_fields")
-            params.update(other_fields)
 
         endpoint = '/api/dcim/cables/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
@@ -397,6 +376,13 @@ def _check_health(config):
 
 
 def _build_payload(params):
+    if params.get('family') is not None:
+        params.update({'family': format_dict.get(params.get('family'))})
+
+    if params.get("other_fields") is not None:
+        other_fields = params.pop("other_fields")
+        params.update(other_fields)
+
     return {key: val for key, val in params.items() if val is not None and val != ''}
 
 

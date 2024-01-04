@@ -144,14 +144,28 @@
           "description": "Specify comma separated values of IDs which you want to fetch."
         },
         {
-          "title": "Filter Query String",
+          "title": "Search",
           "name": "q",
           "visible": true,
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify the query string with which you want to filter the results.",
-          "description": "Specify the query string with which you want to filter the results."
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
+        },
+        {
+          "title": "Address Family",
+          "name": "family",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "select",
+          "options": [
+            "IPv4",
+            "IPv6"
+          ],
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
         },
         {
           "title": "Status",
@@ -541,14 +555,28 @@
           "description": "Specify comma separated values of IDs which you want to fetch."
         },
         {
-          "title": "Filter Query String",
+          "title": "Search Query",
           "name": "q",
           "visible": true,
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify the query string with which you want to filter the results.",
-          "description": "Specify the query string with which you want to filter the results."
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
+        },
+        {
+          "title": "Address Family",
+          "name": "family",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "select",
+          "options": [
+            "IPv4",
+            "IPv6"
+          ],
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
         },
         {
           "title": "Status",
@@ -970,18 +998,18 @@
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify the query string with which you want to filter the results.",
-          "description": "Specify the query string with which you want to filter the results."
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
         },
         {
-          "title": "Filter Query String",
+          "title": "Search Query",
           "name": "q",
           "visible": true,
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify the query string with which you want to filter the results.",
-          "description": "Specify the query string with which you want to filter the results."
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
         },
         {
           "title": "Status",
@@ -1417,14 +1445,14 @@
           "description": "Specify comma separated values of IDs which you want to fetch."
         },
         {
-          "title": "Filter Query String",
+          "title": "Search Query",
           "name": "q",
           "visible": true,
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify the query string with which you want to filter the results.",
-          "description": "Specify the query string with which you want to filter the results."
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
         },
         {
           "title": "Status",
@@ -1963,14 +1991,14 @@
           "description": "Specify comma separated values of IDs which you want to fetch."
         },
         {
-          "title": "Filter Query String",
+          "title": "Search Query",
           "name": "q",
           "visible": true,
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify the query string with which you want to filter the results.",
-          "description": "Specify the query string with which you want to filter the results."
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
         },
         {
           "title": "Status",
@@ -2573,14 +2601,14 @@
           "description": "Specify comma separated values of IDs which you want to fetch."
         },
         {
-          "title": "Filter Query String",
+          "title": "Search Query",
           "name": "q",
           "visible": true,
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify the query string with which you want to filter the results.",
-          "description": "Specify the query string with which you want to filter the results."
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
         },
         {
           "title": "Status",
