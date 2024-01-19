@@ -1,0 +1,2936 @@
+{
+  "name": "netbox",
+  "label": "NetBox",
+  "version": "1.0.0",
+  "description": "NetBox is the leading solution for modeling and documenting modern networks. By combining the traditional disciplines of IP address management (IPAM) and datacenter infrastructure management (DCIM) with powerful APIs and extensions, NetBox provides the ideal \"source of truth\" to power network automation.",
+  "publisher": "Fortinet",
+  "cs_approved": true,
+  "cs_compatible": true,
+  "category": "Asset Management",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "help_online": "",
+  "configuration": {
+    "fields": [
+      {
+        "title": "Server URL",
+        "type": "text",
+        "name": "server_url",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "value": "https://demo.netbox.dev",
+        "tooltip": "Specify the IP address or hostname of the NetBox server to which you will connect and perform automated operations.",
+        "description": "Specify the IP address or hostname of the NetBox server to which you will connect and perform automated operations."
+      },
+      {
+        "title": "Access Token",
+        "type": "password",
+        "name": "api_key",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "tooltip": "Specify the API Token that is generated through the NetBox server.",
+        "description": "Specify the API Token that is generated through the NetBox server."
+      },
+      {
+        "title": "Verify SSL",
+        "name": "verify_ssl",
+        "type": "checkbox",
+        "required": false,
+        "editable": true,
+        "visible": true,
+        "value": true,
+        "tooltip": "Specifies whether the SSL certificate for the server is to be verified or not.By default, this option is set as True.",
+        "description": "Specifies whether the SSL certificate for the server is to be verified or not.By default, this option is set as True."
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "get_ip_address_list",
+      "title": "Get IP Address List",
+      "description": "Get a list of IP address objects in your NetBox instance.",
+      "category": "investigation",
+      "annotation": "get_ip_address_list",
+      "enabled": true,
+      "output_schema": {
+        "count": "",
+        "next": "",
+        "previous": "",
+        "results": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "family": {
+              "value": "",
+              "label": ""
+            },
+            "address": "",
+            "vrf": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "rd": ""
+            },
+            "tenant": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "status": {
+              "value": "",
+              "label": ""
+            },
+            "role": {
+              "value": "",
+              "label": ""
+            },
+            "assigned_object_type": "",
+            "assigned_object_id": "",
+            "assigned_object": "",
+            "nat_inside": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "family": "",
+              "address": ""
+            },
+            "nat_outside": [
+              {
+                "id": "",
+                "url": "",
+                "display": "",
+                "family": "",
+                "address": ""
+              }
+            ],
+            "dns_name": "",
+            "description": "",
+            "comments": "",
+            "tags": [
+              {
+                "id": "",
+                "url": "",
+                "display": "",
+                "name": "",
+                "slug": "",
+                "color": ""
+              }
+            ],
+            "custom_fields": {
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
+            },
+            "created": "",
+            "last_updated": ""
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "title": "IDs",
+          "name": "id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of IDs which you want to fetch.",
+          "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Search",
+          "name": "q",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
+        },
+        {
+          "title": "Address Family",
+          "name": "family",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "select",
+          "options": [
+            "IPv4",
+            "IPv6"
+          ],
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
+        },
+        {
+          "title": "Order by Field",
+          "name": "ordering",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the field to use when ordering the results.",
+          "description": "Specify the field to use when ordering the results."
+        },
+        {
+          "title": "offset",
+          "name": "Offset",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the initial index from which to return the results.",
+          "description": "Specify the initial index from which to return the results."
+        },
+        {
+          "title": "Limit",
+          "name": "limit",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the Number of results to return per page.",
+          "description": "Specify the Number of results to return per page."
+        },
+        {
+          "title": "Other Fields",
+          "tooltip": "Specify fields in the JSON format to be sent as json_data according to Netbox REST API Documentation",
+          "description": "Specify fields in the JSON format to be sent as json_data according to Netbox REST API Documentation",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "json",
+          "name": "other_fields"
+        }
+      ]
+    },
+    {
+      "operation": "get_ip_address",
+      "title": "Get IP Address",
+      "description": "Retrieve a detail view of IP address object from your NetBox instance based on given IP address ID.",
+      "category": "investigation",
+      "annotation": "get_ip_address",
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "url": "",
+        "display": "",
+        "family": {
+          "value": "",
+          "label": ""
+        },
+        "address": "",
+        "vrf": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "rd": ""
+        },
+        "tenant": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "status": {
+          "value": "",
+          "label": ""
+        },
+        "role": {
+          "value": "",
+          "label": ""
+        },
+        "assigned_object_type": "",
+        "assigned_object_id": "",
+        "assigned_object": "",
+        "nat_inside": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "nat_outside": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "family": "",
+            "address": ""
+          }
+        ],
+        "dns_name": "",
+        "description": "",
+        "comments": "",
+        "tags": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": "",
+            "color": ""
+          }
+        ],
+        "custom_fields": {
+          "additionalProp1": "",
+          "additionalProp2": "",
+          "additionalProp3": ""
+        },
+        "created": "",
+        "last_updated": ""
+      },
+      "parameters": [
+        {
+          "title": "IP Address ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this IP address in Netbox instance.",
+          "description": "Specify the unique integer value identifying this IP address in Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "update_ip_address",
+      "title": "Update IP Address",
+      "description": "Update a IP address object from your NetBox instance based on given IP address ID and other parameters.",
+      "category": "investigation",
+      "annotation": "update_ip_address",
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "url": "",
+        "display": "",
+        "family": {
+          "value": "",
+          "label": ""
+        },
+        "address": "",
+        "vrf": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "rd": ""
+        },
+        "tenant": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "status": {
+          "value": "",
+          "label": ""
+        },
+        "role": {
+          "value": "",
+          "label": ""
+        },
+        "assigned_object_type": "",
+        "assigned_object_id": "",
+        "assigned_object": "",
+        "nat_inside": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "nat_outside": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "family": "",
+            "address": ""
+          }
+        ],
+        "dns_name": "",
+        "description": "",
+        "comments": "",
+        "tags": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": "",
+            "color": ""
+          }
+        ],
+        "custom_fields": {
+          "additionalProp1": "",
+          "additionalProp2": "",
+          "additionalProp3": ""
+        },
+        "created": "",
+        "last_updated": ""
+      },
+      "parameters": [
+        {
+          "title": "IP Address ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this IP address in Netbox instance.",
+          "description": "Specify the unique integer value identifying this IP address in Netbox instance."
+        },
+        {
+          "title": "Fields to be updated",
+          "name": "patch_fields",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "json",
+          "value": {
+            "address": "",
+            "vrf": 0,
+            "tenant": 0,
+            "status": "",
+            "role": "",
+            "assigned_object_type": "",
+            "assigned_object_id": 0,
+            "nat_inside": 0,
+            "dns_name": "",
+            "description": "",
+            "comments": "",
+            "tags": [
+              {
+                "name": "",
+                "slug": "",
+                "color": ""
+              }
+            ],
+            "custom_fields": {
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
+            }
+          },
+          "tooltip": "Specify the fields and field values that you want to update in IP address object on Netbox instance.",
+          "description": "Specify the fields and field values that you want to update in IP address object on Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "delete_ip_address",
+      "title": "Delete IP Address",
+      "description": "Delete an IP address object from your NetBox instance based on given IP address ID.",
+      "category": "investigation",
+      "annotation": "delete_ip_address",
+      "enabled": true,
+      "output_schema": {},
+      "parameters": [
+        {
+          "title": "IP Address ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this IP address in Netbox instance.",
+          "description": "Specify the unique integer value identifying this IP address in Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "get_prefix_list",
+      "title": "Get Prefix List",
+      "description": "Get a list of IP address Prefix objects in your NetBox instance. A prefix might be represented as \"192.168.1.0/24.\" Here, \"192.168.1.0\" is the network address, and \"/24\" denotes the subnet mask ",
+      "category": "investigation",
+      "annotation": "get_prefix_list",
+      "enabled": true,
+      "output_schema": {
+        "count": "",
+        "next": "",
+        "previous": "",
+        "results": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "family": {
+              "value": "",
+              "label": ""
+            },
+            "prefix": "",
+            "site": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "vrf": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "rd": ""
+            },
+            "tenant": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "vlan": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "vid": "",
+              "name": ""
+            },
+            "status": {
+              "value": "",
+              "label": ""
+            },
+            "role": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "is_pool": "",
+            "mark_utilized": "",
+            "description": "",
+            "comments": "",
+            "tags": [
+              {
+                "id": "",
+                "url": "",
+                "display": "",
+                "name": "",
+                "slug": "",
+                "color": ""
+              }
+            ],
+            "custom_fields": {
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
+            },
+            "created": "",
+            "last_updated": "",
+            "children": "",
+            "_depth": ""
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "title": "IDs",
+          "name": "id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of IDs which you want to fetch.",
+          "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Search Query",
+          "name": "q",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
+        },
+        {
+          "title": "Address Family",
+          "name": "family",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "select",
+          "options": [
+            "IPv4",
+            "IPv6"
+          ],
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
+        },
+        {
+          "title": "Order by Field",
+          "name": "ordering",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the field to use when ordering the results.",
+          "description": "Specify the field to use when ordering the results."
+        },
+        {
+          "title": "offset",
+          "name": "Offset",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the initial index from which to return the results.",
+          "description": "Specify the initial index from which to return the results."
+        },
+        {
+          "title": "Limit",
+          "name": "limit",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the Number of results to return per page.",
+          "description": "Specify the Number of results to return per page."
+        },
+        {
+          "title": "Other Fields",
+          "tooltip": "Specify fields in the JSON format to be sent as json_data according to Netbox REST API Documentation",
+          "description": "Specify fields in the JSON format to be sent as json_data according to Netbox REST API Documentation",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "json",
+          "name": "other_fields"
+        }
+      ]
+    },
+    {
+      "operation": "get_prefix",
+      "title": "Get Prefix",
+      "description": "Retrieve a detail view of Prefix object from your NetBox instance based on given Prefix ID.",
+      "category": "investigation",
+      "annotation": "get_prefix",
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "url": "",
+        "display": "",
+        "family": {
+          "value": "",
+          "label": ""
+        },
+        "prefix": "",
+        "site": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "vrf": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "rd": ""
+        },
+        "tenant": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "vlan": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "vid": "",
+          "name": ""
+        },
+        "status": {
+          "value": "",
+          "label": ""
+        },
+        "role": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "is_pool": "",
+        "mark_utilized": "",
+        "description": "",
+        "comments": "",
+        "tags": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": "",
+            "color": ""
+          }
+        ],
+        "custom_fields": {
+          "additionalProp1": "",
+          "additionalProp2": "",
+          "additionalProp3": ""
+        },
+        "created": "",
+        "last_updated": "",
+        "children": "",
+        "_depth": ""
+      },
+      "parameters": [
+        {
+          "title": "Prefix ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this Prefix object in Netbox instance.",
+          "description": "Specify the unique integer value identifying this Prefix object in Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "update_prefix",
+      "title": "Update Prefix",
+      "description": "Update a Prefix object from your NetBox instance based on given Prefix ID and other parameters.",
+      "category": "investigation",
+      "annotation": "update_prefix",
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "url": "",
+        "display": "",
+        "family": {
+          "value": "",
+          "label": ""
+        },
+        "prefix": "",
+        "site": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "vrf": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "rd": ""
+        },
+        "tenant": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "vlan": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "vid": "",
+          "name": ""
+        },
+        "status": {
+          "value": "",
+          "label": ""
+        },
+        "role": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "is_pool": "",
+        "mark_utilized": "",
+        "description": "",
+        "comments": "",
+        "tags": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": "",
+            "color": ""
+          }
+        ],
+        "custom_fields": {
+          "additionalProp1": "",
+          "additionalProp2": "",
+          "additionalProp3": ""
+        },
+        "created": "",
+        "last_updated": "",
+        "children": "",
+        "_depth": ""
+      },
+      "parameters": [
+        {
+          "title": "Prefix ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this Prefix in Netbox instance.",
+          "description": "Specify the unique integer value identifying this Prefix in Netbox instance."
+        },
+        {
+          "title": "Fields to be updated",
+          "name": "patch_fields",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "json",
+          "value": {
+            "prefix": "",
+            "site": 0,
+            "vrf": 0,
+            "tenant": 0,
+            "vlan": 0,
+            "status": "",
+            "role": 0,
+            "is_pool": true,
+            "mark_utilized": true,
+            "description": "",
+            "comments": "",
+            "tags": [
+              {
+                "name": "",
+                "slug": "",
+                "color": ""
+              }
+            ],
+            "custom_fields": {
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
+            }
+          },
+          "tooltip": "Specify the fields and field values that you want to update in Prefix object on Netbox instance.",
+          "description": "Specify the fields and field values that you want to update in Prefix object on Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "delete_prefix",
+      "title": "Delete Prefix",
+      "description": "Delete a Prefix object from your NetBox instance based on given Prefix ID.",
+      "category": "investigation",
+      "annotation": "delete_prefix",
+      "enabled": true,
+      "output_schema": {},
+      "parameters": [
+        {
+          "title": "Prefix ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this Prefix in Netbox instance.",
+          "description": "Specify the unique integer value identifying this Prefix in Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "get_vm_list",
+      "title": "Get Virtual Machines List",
+      "description": "Get a list of all Virtual Machines associated with your NetBox instance.",
+      "category": "investigation",
+      "annotation": "get_vm_list",
+      "enabled": true,
+      "output_schema": {
+        "count": "",
+        "next": "",
+        "previous": "",
+        "results": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "status": {
+              "value": "",
+              "label": ""
+            },
+            "site": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "cluster": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": ""
+            },
+            "device": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": ""
+            },
+            "role": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "tenant": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "platform": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "primary_ip": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "family": "",
+              "address": ""
+            },
+            "primary_ip4": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "family": "",
+              "address": ""
+            },
+            "primary_ip6": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "family": "",
+              "address": ""
+            },
+            "vcpus": "",
+            "memory": "",
+            "disk": "",
+            "description": "",
+            "comments": "",
+            "local_context_data": "",
+            "tags": [
+              {
+                "id": "",
+                "url": "",
+                "display": "",
+                "name": "",
+                "slug": "",
+                "color": ""
+              }
+            ],
+            "custom_fields": {
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
+            },
+            "config_context": "",
+            "created": "",
+            "last_updated": "",
+            "interface_count": ""
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "title": "IDs",
+          "name": "id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of IDs which you want to fetch.",
+          "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
+        },
+        {
+          "title": "Search Query",
+          "name": "q",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
+        },
+        {
+          "title": "Order by Field",
+          "name": "ordering",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the field to use when ordering the results.",
+          "description": "Specify the field to use when ordering the results."
+        },
+        {
+          "title": "offset",
+          "name": "Offset",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the initial index from which to return the results.",
+          "description": "Specify the initial index from which to return the results."
+        },
+        {
+          "title": "Limit",
+          "name": "limit",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the Number of results to return per page.",
+          "description": "Specify the Number of results to return per page."
+        },
+        {
+          "title": "Other Fields",
+          "tooltip": "Specify fields in the JSON format to be sent as json_data according to Netbox REST API Documentation",
+          "description": "Specify fields in the JSON format to be sent as json_data according to Netbox REST API Documentation",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "json",
+          "name": "other_fields"
+        }
+      ]
+    },
+    {
+      "operation": "get_vm",
+      "title": "Get Virtual Machine",
+      "description": "Retrieve a detail view of Virtual Machine from your NetBox instance based on given VM ID.",
+      "category": "investigation",
+      "annotation": "get_vm",
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "url": "",
+        "display": "",
+        "name": "",
+        "status": {
+          "value": "",
+          "label": ""
+        },
+        "site": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "cluster": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": ""
+        },
+        "device": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": ""
+        },
+        "role": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "tenant": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "platform": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "primary_ip": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "primary_ip4": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "primary_ip6": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "vcpus": "",
+        "memory": "",
+        "disk": "",
+        "description": "",
+        "comments": "",
+        "local_context_data": "",
+        "tags": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": "",
+            "color": ""
+          }
+        ],
+        "custom_fields": {
+          "additionalProp1": "",
+          "additionalProp2": "",
+          "additionalProp3": ""
+        },
+        "config_context": "",
+        "created": "",
+        "last_updated": "",
+        "interface_count": ""
+      },
+      "parameters": [
+        {
+          "title": "VM ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this VM object in Netbox instance.",
+          "description": "Specify the unique integer value identifying this VM object in Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "update_vm",
+      "title": "Update Virtual Machine",
+      "description": "Update a VM object from your NetBox instance based on given VM ID and other parameters.",
+      "category": "investigation",
+      "annotation": "update_vm",
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "url": "",
+        "display": "",
+        "family": {
+          "value": "",
+          "label": ""
+        },
+        "prefix": "",
+        "site": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "vrf": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "rd": ""
+        },
+        "tenant": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "vlan": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "vid": "",
+          "name": ""
+        },
+        "status": {
+          "value": "",
+          "label": ""
+        },
+        "role": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "is_pool": "",
+        "mark_utilized": "",
+        "description": "",
+        "comments": "",
+        "tags": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": "",
+            "color": ""
+          }
+        ],
+        "custom_fields": {
+          "additionalProp1": "",
+          "additionalProp2": "",
+          "additionalProp3": ""
+        },
+        "created": "",
+        "last_updated": "",
+        "children": "",
+        "_depth": ""
+      },
+      "parameters": [
+        {
+          "title": "VM ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this VM in Netbox instance.",
+          "description": "Specify the unique integer value identifying this VM in Netbox instance."
+        },
+        {
+          "title": "Fields to be updated",
+          "name": "patch_fields",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "json",
+          "value": {
+            "name": "",
+            "status": "",
+            "site": 0,
+            "cluster": 0,
+            "device": 0,
+            "role": 0,
+            "tenant": 0,
+            "platform": 0,
+            "primary_ip4": 0,
+            "primary_ip6": 0,
+            "vcpus": 0,
+            "memory": 0,
+            "disk": 0,
+            "description": "",
+            "comments": "",
+            "local_context_data": "",
+            "tags": [
+              {
+                "name": "",
+                "slug": "",
+                "color": ""
+              }
+            ],
+            "custom_fields": {
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
+            }
+          },
+          "tooltip": "Specify the fields and field values that you want to update in VM object on Netbox instance.",
+          "description": "Specify the fields and field values that you want to update in VM object on Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "delete_vm",
+      "title": "Delete Virtual Machine",
+      "description": "Delete a VM object from your NetBox instance based on given VM ID.",
+      "category": "investigation",
+      "annotation": "delete_vm",
+      "enabled": true,
+      "output_schema": {},
+      "parameters": [
+        {
+          "title": "VM ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this VM in Netbox instance.",
+          "description": "Specify the unique integer value identifying this VM in Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "get_rack_list",
+      "title": "Get Rack List",
+      "description": "Get a list of all Racks associated with your NetBox instance. A Rack refers to a physical or virtual representation of a rack-mounted equipment",
+      "category": "investigation",
+      "annotation": "get_rack_list",
+      "enabled": true,
+      "output_schema": {
+        "count": "",
+        "next": "",
+        "previous": "",
+        "results": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "facility_id": "",
+            "site": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "location": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": "",
+              "_depth": ""
+            },
+            "tenant": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "status": {
+              "value": "",
+              "label": ""
+            },
+            "role": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "serial": "",
+            "asset_tag": "",
+            "type": {
+              "value": "",
+              "label": ""
+            },
+            "width": {
+              "value": "",
+              "label": ""
+            },
+            "u_height": "",
+            "starting_unit": "",
+            "weight": "",
+            "max_weight": "",
+            "weight_unit": {
+              "value": "",
+              "label": ""
+            },
+            "desc_units": "",
+            "outer_width": "",
+            "outer_depth": "",
+            "outer_unit": {
+              "value": "",
+              "label": ""
+            },
+            "mounting_depth": "",
+            "description": "",
+            "comments": "",
+            "tags": [
+              {
+                "id": "",
+                "url": "",
+                "display": "",
+                "name": "",
+                "slug": "",
+                "color": ""
+              }
+            ],
+            "custom_fields": {
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
+            },
+            "created": "",
+            "last_updated": "",
+            "device_count": "",
+            "powerfeed_count": ""
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "title": "IDs",
+          "name": "id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of IDs which you want to fetch.",
+          "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Search Query",
+          "name": "q",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
+        },
+        {
+          "title": "Order by Field",
+          "name": "ordering",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the field to use when ordering the results.",
+          "description": "Specify the field to use when ordering the results."
+        },
+        {
+          "title": "offset",
+          "name": "Offset",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the initial index from which to return the results.",
+          "description": "Specify the initial index from which to return the results."
+        },
+        {
+          "title": "Limit",
+          "name": "limit",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the Number of results to return per page.",
+          "description": "Specify the Number of results to return per page."
+        },
+        {
+          "title": "Other Fields",
+          "tooltip": "Specify fields in the JSON format to be sent as json_data according to Netbox REST API Documentation",
+          "description": "Specify fields in the JSON format to be sent as json_data according to Netbox REST API Documentation",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "json",
+          "name": "other_fields"
+        }
+      ]
+    },
+    {
+      "operation": "get_rack",
+      "title": "Get Rack",
+      "description": "Retrieve a detail view of Rack object from your NetBox instance based on given Rack ID.",
+      "category": "investigation",
+      "annotation": "get_rack",
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "url": "",
+        "display": "",
+        "name": "",
+        "facility_id": "",
+        "site": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "location": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": "",
+          "_depth": ""
+        },
+        "tenant": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "status": {
+          "value": "",
+          "label": ""
+        },
+        "role": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "serial": "",
+        "asset_tag": "",
+        "type": {
+          "value": "",
+          "label": ""
+        },
+        "width": {
+          "value": "",
+          "label": ""
+        },
+        "u_height": "",
+        "starting_unit": "",
+        "weight": "",
+        "max_weight": "",
+        "weight_unit": {
+          "value": "",
+          "label": ""
+        },
+        "desc_units": "",
+        "outer_width": "",
+        "outer_depth": "",
+        "outer_unit": {
+          "value": "",
+          "label": ""
+        },
+        "mounting_depth": "",
+        "description": "",
+        "comments": "",
+        "tags": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": "",
+            "color": ""
+          }
+        ],
+        "custom_fields": {
+          "additionalProp1": "",
+          "additionalProp2": "",
+          "additionalProp3": ""
+        },
+        "created": "",
+        "last_updated": "",
+        "device_count": "",
+        "powerfeed_count": ""
+      },
+      "parameters": [
+        {
+          "title": "Rack ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this Rack object in Netbox instance.",
+          "description": "Specify the unique integer value identifying this Rack object in Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "update_rack",
+      "title": "Update Rack",
+      "description": "Update a Rack object from your NetBox instance based on given Rack ID and other parameters.",
+      "category": "investigation",
+      "annotation": "update_rack",
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "url": "",
+        "display": "",
+        "name": "",
+        "facility_id": "",
+        "site": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "location": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": "",
+          "_depth": ""
+        },
+        "tenant": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "status": {
+          "value": "",
+          "label": ""
+        },
+        "role": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "serial": "",
+        "asset_tag": "",
+        "type": {
+          "value": "",
+          "label": ""
+        },
+        "width": {
+          "value": "",
+          "label": ""
+        },
+        "u_height": "",
+        "starting_unit": "",
+        "weight": "",
+        "max_weight": "",
+        "weight_unit": {
+          "value": "",
+          "label": ""
+        },
+        "desc_units": "",
+        "outer_width": "",
+        "outer_depth": "",
+        "outer_unit": {
+          "value": "",
+          "label": ""
+        },
+        "mounting_depth": "",
+        "description": "",
+        "comments": "",
+        "tags": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": "",
+            "color": ""
+          }
+        ],
+        "custom_fields": {
+          "additionalProp1": "",
+          "additionalProp2": "",
+          "additionalProp3": ""
+        },
+        "created": "",
+        "last_updated": "",
+        "device_count": "",
+        "powerfeed_count": ""
+      },
+      "parameters": [
+        {
+          "title": "Rack ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this Rack in Netbox instance.",
+          "description": "Specify the unique integer value identifying this Rack in Netbox instance."
+        },
+        {
+          "title": "Fields to be updated",
+          "name": "patch_fields",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "json",
+          "value": {
+            "name": "",
+            "facility_id": "",
+            "site": 0,
+            "location": 0,
+            "tenant": 0,
+            "status": "",
+            "role": 0,
+            "serial": "",
+            "asset_tag": "",
+            "type": "",
+            "width": 0,
+            "u_height": 0,
+            "starting_unit": 0,
+            "weight": 0,
+            "max_weight": 0,
+            "weight_unit": "",
+            "desc_units": true,
+            "outer_width": 0,
+            "outer_depth": 0,
+            "outer_unit": "",
+            "mounting_depth": 0,
+            "description": "",
+            "comments": "",
+            "tags": [
+              {
+                "name": "",
+                "slug": "",
+                "color": ""
+              }
+            ],
+            "custom_fields": {
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
+            }
+          },
+          "tooltip": "Specify the fields and field values that you want to update in VM object on Netbox instance.",
+          "description": "Specify the fields and field values that you want to update in VM object on Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "delete_rack",
+      "title": "Delete Rack",
+      "description": "Delete a Rack object from your NetBox instance based on given Rack ID.",
+      "category": "investigation",
+      "annotation": "delete_rack",
+      "enabled": true,
+      "output_schema": {},
+      "parameters": [
+        {
+          "title": "Rack ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this Rack in Netbox instance.",
+          "description": "Specify the unique integer value identifying this Rack in Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "get_device_list",
+      "title": "Get Devices List",
+      "description": "Get a list of all Devices associated with your NetBox instance. A Device refers to the various pieces of equipment or hardware that make up a network or data center infrastructure.",
+      "category": "investigation",
+      "annotation": "get_device_list",
+      "enabled": true,
+      "output_schema": {
+        "count": "",
+        "next": "",
+        "previous": "",
+        "results": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "device_type": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "manufacturer": {
+                "id": "",
+                "url": "",
+                "display": "",
+                "name": "",
+                "slug": ""
+              },
+              "model": "",
+              "slug": ""
+            },
+            "role": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "device_role": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "tenant": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "platform": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "serial": "",
+            "asset_tag": "",
+            "site": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "location": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": "",
+              "_depth": ""
+            },
+            "rack": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": ""
+            },
+            "position": "",
+            "face": {
+              "value": "",
+              "label": ""
+            },
+            "latitude": "",
+            "longitude": "",
+            "parent_device": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": ""
+            },
+            "status": {
+              "value": "",
+              "label": ""
+            },
+            "airflow": {
+              "value": "",
+              "label": ""
+            },
+            "primary_ip": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "family": "",
+              "address": ""
+            },
+            "primary_ip4": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "family": "",
+              "address": ""
+            },
+            "primary_ip6": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "family": "",
+              "address": ""
+            },
+            "oob_ip": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "family": "",
+              "address": ""
+            },
+            "cluster": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": ""
+            },
+            "virtual_chassis": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "master": {
+                "id": "",
+                "url": "",
+                "display": "",
+                "name": ""
+              }
+            },
+            "vc_position": "",
+            "vc_priority": "",
+            "description": "",
+            "comments": "",
+            "config_template": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": ""
+            },
+            "config_context": "",
+            "local_context_data": "",
+            "tags": [
+              {
+                "id": "",
+                "url": "",
+                "display": "",
+                "name": "",
+                "slug": "",
+                "color": ""
+              }
+            ],
+            "custom_fields": {
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
+            },
+            "created": "",
+            "last_updated": "",
+            "console_port_count": "",
+            "console_server_port_count": "",
+            "power_port_count": "",
+            "power_outlet_count": "",
+            "interface_count": "",
+            "front_port_count": "",
+            "rear_port_count": "",
+            "device_bay_count": "",
+            "module_bay_count": "",
+            "inventory_item_count": ""
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "title": "IDs",
+          "name": "id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of IDs which you want to fetch.",
+          "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Region IDs",
+          "name": "region",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Region IDs whose Devices you want to fetch.",
+          "description": "Specify comma separated values of Region IDs whose Devices you want to fetch."
+        },
+        {
+          "title": "Sites",
+          "name": "site",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Site names whose Devices you want to fetch.",
+          "description": "Specify comma separated values of Site names whose Devices you want to fetch."
+        },
+        {
+          "title": "Rack IDs",
+          "name": "rack_id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Rack IDs whose Devices you want to fetch.",
+          "description": "Specify comma separated values of Rack IDs whose Devices you want to fetch."
+        },
+        {
+          "title": "Asset Tags",
+          "name": "asset_tag",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Asset Tags which is attached to Devices you want to fetch.",
+          "description": "Specify comma separated values of Asset Tags which is attached to Devices you want to fetch."
+        },
+        {
+          "title": "Tenants",
+          "name": "tenant",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Tenant names whose Devices you want to fetch.",
+          "description": "Specify comma separated values of Tenant names whose Devices you want to fetch."
+        },
+        {
+          "title": "Search Query",
+          "name": "q",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
+        },
+        {
+          "title": "Order by Field",
+          "name": "ordering",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the field to use when ordering the results.",
+          "description": "Specify the field to use when ordering the results."
+        },
+        {
+          "title": "offset",
+          "name": "Offset",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the initial index from which to return the results.",
+          "description": "Specify the initial index from which to return the results."
+        },
+        {
+          "title": "Limit",
+          "name": "limit",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the Number of results to return per page.",
+          "description": "Specify the Number of results to return per page."
+        },
+        {
+          "title": "Other Fields",
+          "tooltip": "Specify fields in the JSON format to be sent as json_data according to Netbox REST API Documentation",
+          "description": "Specify fields in the JSON format to be sent as json_data according to Netbox REST API Documentation",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "json",
+          "name": "other_fields"
+        }
+      ]
+    },
+    {
+      "operation": "get_device",
+      "title": "Get Device",
+      "description": "Retrieve a detail view of Device object from your NetBox instance based on given Device ID.",
+      "category": "investigation",
+      "annotation": "get_device",
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "url": "",
+        "display": "",
+        "name": "",
+        "device_type": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "manufacturer": {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": ""
+          },
+          "model": "",
+          "slug": ""
+        },
+        "role": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "device_role": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "tenant": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "platform": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "serial": "",
+        "asset_tag": "",
+        "site": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "location": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": "",
+          "_depth": ""
+        },
+        "rack": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": ""
+        },
+        "position": "",
+        "face": {
+          "value": "",
+          "label": ""
+        },
+        "latitude": "",
+        "longitude": "",
+        "parent_device": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": ""
+        },
+        "status": {
+          "value": "",
+          "label": ""
+        },
+        "airflow": {
+          "value": "",
+          "label": ""
+        },
+        "primary_ip": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "primary_ip4": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "primary_ip6": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "oob_ip": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "cluster": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": ""
+        },
+        "virtual_chassis": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "master": {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": ""
+          }
+        },
+        "vc_position": "",
+        "vc_priority": "",
+        "description": "",
+        "comments": "",
+        "config_template": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": ""
+        },
+        "config_context": "",
+        "local_context_data": "",
+        "tags": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": "",
+            "color": ""
+          }
+        ],
+        "custom_fields": {
+          "additionalProp1": "",
+          "additionalProp2": "",
+          "additionalProp3": ""
+        },
+        "created": "",
+        "last_updated": "",
+        "console_port_count": "",
+        "console_server_port_count": "",
+        "power_port_count": "",
+        "power_outlet_count": "",
+        "interface_count": "",
+        "front_port_count": "",
+        "rear_port_count": "",
+        "device_bay_count": "",
+        "module_bay_count": "",
+        "inventory_item_count": ""
+      },
+      "parameters": [
+        {
+          "title": "Device ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this Device object in Netbox instance.",
+          "description": "Specify the unique integer value identifying this Device object in Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "update_device",
+      "title": "Update Device",
+      "description": "Update a Device object from your NetBox instance based on given Device ID and other parameters.",
+      "category": "investigation",
+      "annotation": "update_device",
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "url": "",
+        "display": "",
+        "name": "",
+        "device_type": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "manufacturer": {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": ""
+          },
+          "model": "",
+          "slug": ""
+        },
+        "role": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "device_role": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "tenant": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "platform": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "serial": "",
+        "asset_tag": "",
+        "site": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "location": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": "",
+          "_depth": ""
+        },
+        "rack": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": ""
+        },
+        "position": "",
+        "face": {
+          "value": "",
+          "label": ""
+        },
+        "latitude": "",
+        "longitude": "",
+        "parent_device": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": ""
+        },
+        "status": {
+          "value": "",
+          "label": ""
+        },
+        "airflow": {
+          "value": "",
+          "label": ""
+        },
+        "primary_ip": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "primary_ip4": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "primary_ip6": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "oob_ip": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "family": "",
+          "address": ""
+        },
+        "cluster": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": ""
+        },
+        "virtual_chassis": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "master": {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": ""
+          }
+        },
+        "vc_position": "",
+        "vc_priority": "",
+        "description": "",
+        "comments": "",
+        "config_template": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": ""
+        },
+        "config_context": "",
+        "local_context_data": "",
+        "tags": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": "",
+            "color": ""
+          }
+        ],
+        "custom_fields": {
+          "additionalProp1": "",
+          "additionalProp2": "",
+          "additionalProp3": ""
+        },
+        "created": "",
+        "last_updated": "",
+        "console_port_count": "",
+        "console_server_port_count": "",
+        "power_port_count": "",
+        "power_outlet_count": "",
+        "interface_count": "",
+        "front_port_count": "",
+        "rear_port_count": "",
+        "device_bay_count": "",
+        "module_bay_count": "",
+        "inventory_item_count": ""
+      },
+      "parameters": [
+        {
+          "title": "Device ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this Device in Netbox instance.",
+          "description": "Specify the unique integer value identifying this Device in Netbox instance."
+        },
+        {
+          "title": "Fields to be updated",
+          "name": "patch_fields",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "json",
+          "value": {
+            "name": "",
+            "device_type": 0,
+            "role": 0,
+            "tenant": 0,
+            "platform": 0,
+            "serial": "",
+            "asset_tag": "",
+            "site": 0,
+            "location": 0,
+            "rack": 0,
+            "position": 0,
+            "face": "",
+            "latitude": 0,
+            "longitude": 0,
+            "status": "",
+            "airflow": "",
+            "primary_ip4": 0,
+            "primary_ip6": 0,
+            "oob_ip": 0,
+            "cluster": 0,
+            "virtual_chassis": 0,
+            "vc_position": 0,
+            "vc_priority": 0,
+            "description": "",
+            "comments": "",
+            "config_template": 0,
+            "local_context_data": "",
+            "tags": [
+              {
+                "name": "",
+                "slug": "",
+                "color": ""
+              }
+            ],
+            "custom_fields": {
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
+            }
+          },
+          "tooltip": "Specify the fields and field values that you want to update in VM object on Netbox instance.",
+          "description": "Specify the fields and field values that you want to update in VM object on Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "delete_device",
+      "title": "Delete Device",
+      "description": "Delete a Device object from your NetBox instance based on given Device ID.",
+      "category": "investigation",
+      "annotation": "delete_device",
+      "enabled": true,
+      "output_schema": {},
+      "parameters": [
+        {
+          "title": "Device ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this Device in Netbox instance.",
+          "description": "Specify the unique integer value identifying this Device in Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "get_cable_list",
+      "title": "Get Cables List",
+      "description": "Get a list of all Cables associated with your NetBox instance. Cables represent the links between different devices or interfaces within a network infrastructure and are used to denote how devices are interconnected.",
+      "category": "investigation",
+      "annotation": "get_cable_list",
+      "enabled": true,
+      "output_schema": {
+        "count": "",
+        "next": "",
+        "previous": "",
+        "results": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "type": "",
+            "a_terminations": [
+              {
+                "object_type": "",
+                "object_id": "",
+                "object": ""
+              }
+            ],
+            "b_terminations": [
+              {
+                "object_type": "",
+                "object_id": "",
+                "object": ""
+              }
+            ],
+            "status": {
+              "value": "",
+              "label": ""
+            },
+            "tenant": {
+              "id": "",
+              "url": "",
+              "display": "",
+              "name": "",
+              "slug": ""
+            },
+            "label": "",
+            "color": "",
+            "length": "",
+            "length_unit": {
+              "value": "",
+              "label": ""
+            },
+            "description": "",
+            "comments": "",
+            "tags": [
+              {
+                "id": "",
+                "url": "",
+                "display": "",
+                "name": "",
+                "slug": "",
+                "color": ""
+              }
+            ],
+            "custom_fields": {
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
+            },
+            "created": "",
+            "last_updated": ""
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "title": "IDs",
+          "name": "id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of IDs which you want to fetch.",
+          "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Search Query",
+          "name": "q",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the search query with which you want to filter the results.",
+          "description": "Specify the search query with which you want to filter the results."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
+        },
+        {
+          "title": "Order by Field",
+          "name": "ordering",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the field to use when ordering the results.",
+          "description": "Specify the field to use when ordering the results."
+        },
+        {
+          "title": "offset",
+          "name": "Offset",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the initial index from which to return the results.",
+          "description": "Specify the initial index from which to return the results."
+        },
+        {
+          "title": "Limit",
+          "name": "limit",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the Number of results to return per page.",
+          "description": "Specify the Number of results to return per page."
+        },
+        {
+          "title": "Other Fields",
+          "tooltip": "Specify fields in the JSON format to be sent as json_data according to Netbox REST API Documentation",
+          "description": "Specify fields in the JSON format to be sent as json_data according to Netbox REST API Documentation",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "json",
+          "name": "other_fields"
+        }
+      ]
+    },
+    {
+      "operation": "get_cable",
+      "title": "Get Cable",
+      "description": "Retrieve a detail view of Cable object from your NetBox instance based on given Cable ID.",
+      "category": "investigation",
+      "annotation": "get_cable",
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "url": "",
+        "display": "",
+        "type": "",
+        "a_terminations": [
+          {
+            "object_type": "",
+            "object_id": "",
+            "object": ""
+          }
+        ],
+        "b_terminations": [
+          {
+            "object_type": "",
+            "object_id": "",
+            "object": ""
+          }
+        ],
+        "status": {
+          "value": "",
+          "label": ""
+        },
+        "tenant": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "label": "",
+        "color": "",
+        "length": "",
+        "length_unit": {
+          "value": "",
+          "label": ""
+        },
+        "description": "",
+        "comments": "",
+        "tags": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": "",
+            "color": ""
+          }
+        ],
+        "custom_fields": {
+          "additionalProp1": "",
+          "additionalProp2": "",
+          "additionalProp3": ""
+        },
+        "created": "",
+        "last_updated": ""
+      },
+      "parameters": [
+        {
+          "title": "Cable ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this Cable object in Netbox instance.",
+          "description": "Specify the unique integer value identifying this Cable object in Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "update_cable",
+      "title": "Update Cable",
+      "description": "Update a Cable object from your NetBox instance based on given Cable ID and other parameters.",
+      "category": "investigation",
+      "annotation": "update_cable",
+      "enabled": true,
+      "output_schema": {
+        "id": "",
+        "url": "",
+        "display": "",
+        "type": "",
+        "a_terminations": [
+          {
+            "object_type": "",
+            "object_id": "",
+            "object": ""
+          }
+        ],
+        "b_terminations": [
+          {
+            "object_type": "",
+            "object_id": "",
+            "object": ""
+          }
+        ],
+        "status": {
+          "value": "",
+          "label": ""
+        },
+        "tenant": {
+          "id": "",
+          "url": "",
+          "display": "",
+          "name": "",
+          "slug": ""
+        },
+        "label": "",
+        "color": "",
+        "length": "",
+        "length_unit": {
+          "value": "",
+          "label": ""
+        },
+        "description": "",
+        "comments": "",
+        "tags": [
+          {
+            "id": "",
+            "url": "",
+            "display": "",
+            "name": "",
+            "slug": "",
+            "color": ""
+          }
+        ],
+        "custom_fields": {
+          "additionalProp1": "",
+          "additionalProp2": "",
+          "additionalProp3": ""
+        },
+        "created": "",
+        "last_updated": ""
+      },
+      "parameters": [
+        {
+          "title": "Cable ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this Cable in Netbox instance.",
+          "description": "Specify the unique integer value identifying this Cable in Netbox instance."
+        },
+        {
+          "title": "Fields to be updated",
+          "name": "patch_fields",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "json",
+          "value": {
+            "type": "",
+            "a_terminations": [
+              {
+                "object_type": "",
+                "object_id": 0
+              }
+            ],
+            "b_terminations": [
+              {
+                "object_type": "",
+                "object_id": 0
+              }
+            ],
+            "status": "",
+            "tenant": 0,
+            "label": "",
+            "color": "",
+            "length": 0,
+            "length_unit": "",
+            "description": "",
+            "comments": "",
+            "tags": [
+              {
+                "name": "",
+                "slug": "",
+                "color": ""
+              }
+            ],
+            "custom_fields": {
+              "additionalProp1": "",
+              "additionalProp2": "",
+              "additionalProp3": ""
+            }
+          },
+          "tooltip": "Specify the fields and field values that you want to update in Cable object on Netbox instance.",
+          "description": "Specify the fields and field values that you want to update in Cable object on Netbox instance."
+        }
+      ]
+    },
+    {
+      "operation": "delete_cable",
+      "title": "Delete Cable",
+      "description": "Delete a Cable object from your NetBox instance based on given Cable ID.",
+      "category": "investigation",
+      "annotation": "delete_cable",
+      "enabled": true,
+      "output_schema": {},
+      "parameters": [
+        {
+          "title": "Cable ID",
+          "name": "id",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "integer",
+          "tooltip": "Specify the unique integer value identifying this Cable in Netbox instance.",
+          "description": "Specify the unique integer value identifying this Cable in Netbox instance."
+        }
+      ]
+    }
+  ]
+}
