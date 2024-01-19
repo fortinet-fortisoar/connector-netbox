@@ -1991,6 +1991,56 @@
           "description": "Specify comma separated values of IDs which you want to fetch."
         },
         {
+          "title": "Region IDs",
+          "name": "region",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Region IDs whose Devices you want to fetch.",
+          "description": "Specify comma separated values of Region IDs whose Devices you want to fetch."
+        },
+        {
+          "title": "Sites",
+          "name": "site",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Site names whose Devices you want to fetch.",
+          "description": "Specify comma separated values of Site names whose Devices you want to fetch."
+        },
+        {
+          "title": "Rack IDs",
+          "name": "rack_id",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Rack IDs whose Devices you want to fetch.",
+          "description": "Specify comma separated values of Rack IDs whose Devices you want to fetch."
+        },
+        {
+          "title": "Asset Tags",
+          "name": "asset_tag",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Asset Tags which is attached to Devices you want to fetch.",
+          "description": "Specify comma separated values of Asset Tags which is attached to Devices you want to fetch."
+        },
+        {
+          "title": "Tenants",
+          "name": "tenant",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Tenant names whose Devices you want to fetch.",
+          "description": "Specify comma separated values of Tenant names whose Devices you want to fetch."
+        },
+        {
           "title": "Search Query",
           "name": "q",
           "visible": true,
