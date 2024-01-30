@@ -5,8 +5,11 @@ Copyright (c) 2024 Fortinet Inc
 Copyright end
 """
 
+import json
+
 import requests
 from connectors.core.connector import get_logger, ConnectorError
+
 from .constants import *
 
 logger = get_logger('netbox')
@@ -39,24 +42,26 @@ class Netbox:
             if response.ok:
                 logger.info('successfully get response for url {}'.format(url))
                 if method.lower() == 'delete':
-                    return response
+                    return "Successfully Deleted"
                 else:
                     return response.json()
             elif response.status_code == 400:
                 error_response = response.json()
-                error_description = error_response['message']
-                raise ConnectorError({'error_description': error_description})
+                if error_response.get("detail") is not None:
+                    raise ConnectorError(error_response.get("detail"))
+                else:
+                    raise ConnectorError(error_response)
             elif response.status_code == 401:
                 error_response = response.json()
                 if error_response.get('error'):
                     error_description = error_response['error']
                 else:
-                    error_description = error_response['message']
+                    error_description = error_response.get('detail')
                 raise ConnectorError({'error_description': error_description})
             elif response.status_code == 404:
                 error_response = response.json()
-                error_description = error_response['message']
-                raise ConnectorError({'error_description': error_description})
+                error_description = error_response.get('detail')
+                raise ConnectorError(error_description)
             else:
                 logger.error(response.json())
         except requests.exceptions.SSLError:
@@ -77,7 +82,6 @@ def get_ip_address_list(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-
         endpoint = f'/api/ipam/ip-addresses/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
     except Exception as err:
@@ -90,7 +94,7 @@ def get_ip_address(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/ipam/ip-addresses/{params.get("id")}'
+        endpoint = f'/api/ipam/ip-addresses/{params.get("id")}/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
     except Exception as err:
         logger.error(str(err))
@@ -102,8 +106,8 @@ def update_ip_address(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/ipam/ip-addresses/{params.pop("id")}'
-        return nb.make_request(endpoint=endpoint, method='PATCH', data=params.get("patch_fields"))
+        endpoint = f'/api/ipam/ip-addresses/{params.pop("id")}/'
+        return nb.make_request(endpoint=endpoint, method='PATCH', data=json.dumps(params.get("patch_fields")))
     except Exception as err:
         logger.error(str(err))
         raise ConnectorError(str(err))
@@ -114,7 +118,7 @@ def delete_ip_address(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/ipam/ip-addresses/{params.pop("id")}'
+        endpoint = f'/api/ipam/ip-addresses/{params.pop("id")}/'
         return nb.make_request(endpoint=endpoint, method='DELETE')
     except Exception as err:
         logger.error(str(err))
@@ -138,7 +142,7 @@ def get_prefix(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/ipam/prefixes/{params.get("id")}'
+        endpoint = f'/api/ipam/prefixes/{params.get("id")}/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
     except Exception as err:
         logger.error(str(err))
@@ -150,8 +154,8 @@ def update_prefix(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/ipam/prefixes/{params.get("id")}'
-        return nb.make_request(endpoint=endpoint, method='PATCH', data=params.get("patch_fields"))
+        endpoint = f'/api/ipam/prefixes/{params.get("id")}/'
+        return nb.make_request(endpoint=endpoint, method='PATCH', data=json.dumps(params.get("patch_fields")))
     except Exception as err:
         logger.error(str(err))
         raise ConnectorError(str(err))
@@ -162,7 +166,7 @@ def delete_prefix(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/ipam/prefixes/{params.get("id")}'
+        endpoint = f'/api/ipam/prefixes/{params.get("id")}/'
         return nb.make_request(endpoint=endpoint, method='DELETE')
     except Exception as err:
         logger.error(str(err))
@@ -186,7 +190,7 @@ def get_vm(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/virtualization/virtual-machines/{params.get("id")}'
+        endpoint = f'/api/virtualization/virtual-machines/{params.get("id")}/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
     except Exception as err:
         logger.error(str(err))
@@ -198,8 +202,8 @@ def update_vm(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/virtualization/virtual-machines/{params.get("id")}'
-        return nb.make_request(endpoint=endpoint, method='PATCH', data=params.get("patch_fields"))
+        endpoint = f'/api/virtualization/virtual-machines/{params.get("id")}/'
+        return nb.make_request(endpoint=endpoint, method='PATCH', data=json.dumps(params.get("patch_fields")))
     except Exception as err:
         logger.error(str(err))
         raise ConnectorError(str(err))
@@ -210,7 +214,7 @@ def delete_vm(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/virtualization/virtual-machines/{params.get("id")}'
+        endpoint = f'/api/virtualization/virtual-machines/{params.get("id")}/'
         return nb.make_request(endpoint=endpoint, method='DELETE')
     except Exception as err:
         logger.error(str(err))
@@ -234,7 +238,7 @@ def get_rack(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/dcim/racks/{params.get("id")}'
+        endpoint = f'/api/dcim/racks/{params.get("id")}/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
     except Exception as err:
         logger.error(str(err))
@@ -246,8 +250,8 @@ def update_rack(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/dcim/racks/{params.get("id")}'
-        return nb.make_request(endpoint=endpoint, method='PATCH', data=params.get("patch_fields"))
+        endpoint = f'/api/dcim/racks/{params.get("id")}/'
+        return nb.make_request(endpoint=endpoint, method='PATCH', data=json.dumps(params.get("patch_fields")))
     except Exception as err:
         logger.error(str(err))
         raise ConnectorError(str(err))
@@ -258,7 +262,7 @@ def delete_rack(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/dcim/racks/{params.get("id")}'
+        endpoint = f'/api/dcim/racks/{params.get("id")}/'
         return nb.make_request(endpoint=endpoint, method='DELETE')
     except Exception as err:
         logger.error(str(err))
@@ -269,7 +273,6 @@ def get_device_list(config: dict, params: dict):
     try:
         nb = Netbox(config)
         params = _build_payload(params)
-
         endpoint = '/api/dcim/devices/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
     except Exception as err:
@@ -282,7 +285,7 @@ def get_device(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/dcim/devices/{params.get("id")}'
+        endpoint = f'/api/dcim/devices/{params.get("id")}/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
     except Exception as err:
         logger.error(str(err))
@@ -292,10 +295,10 @@ def get_device(config: dict, params: dict):
 def update_device(config: dict, params: dict):
     try:
         nb = Netbox(config)
-        params = _build_payload(params)
-
-        endpoint = f'/api/dcim/devices/{params.get("id")}'
-        return nb.make_request(endpoint=endpoint, method='PATCH', data=params.get("patch_fields"))
+        params = _build_payload(params, False)
+        logger.info(f"After Build Payload params is {params}")
+        endpoint = f'/api/dcim/devices/{params.get("id")}/'
+        return nb.make_request(endpoint=endpoint, method='PATCH', data=json.dumps(params))
     except Exception as err:
         logger.error(str(err))
         raise ConnectorError(str(err))
@@ -306,7 +309,7 @@ def delete_device(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/dcim/devices/{params.get("id")}'
+        endpoint = f'/api/dcim/devices/{params.get("id")}/'
         return nb.make_request(endpoint=endpoint, method='DELETE')
     except Exception as err:
         logger.error(str(err))
@@ -330,7 +333,7 @@ def get_cable(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/dcim/cables/{params.get("id")}'
+        endpoint = f'/api/dcim/cables/{params.get("id")}/'
         return nb.make_request(endpoint=endpoint, method='GET', params=params)
     except Exception as err:
         logger.error(str(err))
@@ -342,8 +345,8 @@ def update_cable(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/dcim/cables/{params.get("id")}'
-        return nb.make_request(endpoint=endpoint, method='PATCH', data=params.get("patch_fields"))
+        endpoint = f'/api/dcim/cables/{params.get("id")}/'
+        return nb.make_request(endpoint=endpoint, method='PATCH', data=json.dumps(params.get("patch_fields")))
     except Exception as err:
         logger.error(str(err))
         raise ConnectorError(str(err))
@@ -354,7 +357,7 @@ def delete_cable(config: dict, params: dict):
         nb = Netbox(config)
         params = _build_payload(params)
 
-        endpoint = f'/api/dcim/cables/{params.get("id")}'
+        endpoint = f'/api/dcim/cables/{params.get("id")}/'
         return nb.make_request(endpoint=endpoint, method='DELETE')
     except Exception as err:
         logger.error(str(err))
@@ -375,8 +378,15 @@ def _check_health(config):
         raise ConnectorError(str(err))
 
 
-def _build_payload(params):
-    if params.get('family') is not None:
+def _build_payload(params, use_csv_params=True):
+    logger.info(f"Inside Build Payload params is {params}")
+    if use_csv_params:
+        csv_params = ["site", "region", "rack_id", "asset_tag", "tenant", "tag", "type", "name", "role", "prefix"]
+        for p in csv_params:
+            if params.get(p) is not None and params.get(p) != "":
+                params.update({f"{p}": params.get(p).split(",")})
+
+    if params.get('family') is not None and params.get('family') != "":
         params.update({'family': format_dict.get(params.get('family'))})
 
     if params.get("other_fields") is not None:
