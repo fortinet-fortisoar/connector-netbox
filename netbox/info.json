@@ -24,7 +24,7 @@
         "description": "Specify the IP address or hostname of the NetBox server to which you will connect and perform automated operations."
       },
       {
-        "title": "Access Token",
+        "title": "API Token",
         "type": "password",
         "name": "api_key",
         "required": true,
@@ -142,6 +142,36 @@
           "type": "text",
           "tooltip": "Specify comma separated values of IDs which you want to fetch.",
           "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Name",
+          "name": "name",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Prefix names which you want to fetch.",
+          "description": "Specify comma separated values of Prefix names which you want to fetch."
+        },
+        {
+          "title": "Roles",
+          "name": "role",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Role Slug names whose Prefix you want to fetch.",
+          "description": "Specify comma separated values of Role Slug names whose Prefix you want to fetch."
+        },
+        {
+          "title": "Tags",
+          "name": "tag",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Tags names whose Prefix you want to fetch.",
+          "description": "Specify comma separated values of Tags names whose Prefix you want to fetch."
         },
         {
           "title": "Search",
@@ -553,6 +583,46 @@
           "type": "text",
           "tooltip": "Specify comma separated values of IDs which you want to fetch.",
           "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Prefix",
+          "name": "prefix",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Prefix names you want to fetch.",
+          "description": "Specify comma separated values of Prefix names you want to fetch."
+        },
+        {
+          "title": "Sites",
+          "name": "site",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Site Slug names whose Prefix you want to fetch.",
+          "description": "Specify comma separated values of Site Slug names whose Prefix you want to fetch."
+        },
+        {
+          "title": "Roles",
+          "name": "role",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Role Slug names whose Prefix you want to fetch.",
+          "description": "Specify comma separated values of Role Slug names whose Prefix you want to fetch."
+        },
+        {
+          "title": "Tags",
+          "name": "tag",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Tags names whose Prefix you want to fetch.",
+          "description": "Specify comma separated values of Tags names whose Prefix you want to fetch."
         },
         {
           "title": "Search Query",
@@ -990,6 +1060,46 @@
           "type": "text",
           "tooltip": "Specify comma separated values of IDs which you want to fetch.",
           "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Name",
+          "name": "name",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Virtual Machines names which you want to fetch.",
+          "description": "Specify comma separated values of Virtual Machines names which you want to fetch."
+        },
+        {
+          "title": "Sites",
+          "name": "site",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Site Slug names whose Virtual Machines you want to fetch.",
+          "description": "Specify comma separated values of Site Slug names whose Virtual Machines you want to fetch."
+        },
+        {
+          "title": "Roles",
+          "name": "role",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Role Slug names whose Virtual Machines you want to fetch.",
+          "description": "Specify comma separated values of Role Slug names whose Virtual Machines you want to fetch."
+        },
+        {
+          "title": "Tags",
+          "name": "tag",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Tags names whose Virtual Machines you want to fetch.",
+          "description": "Specify comma separated values of Tags names whose Virtual Machines you want to fetch."
         },
         {
           "title": "Status",
@@ -1443,6 +1553,56 @@
           "type": "text",
           "tooltip": "Specify comma separated values of IDs which you want to fetch.",
           "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Name",
+          "name": "name",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Rack names which you want to fetch.",
+          "description": "Specify comma separated values of Rack names which you want to fetch."
+        },
+        {
+          "title": "Sites",
+          "name": "site",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Site Slug names whose Rack you want to fetch.",
+          "description": "Specify comma separated values of Site Slug names whose Rack you want to fetch."
+        },
+        {
+          "title": "Roles",
+          "name": "role",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Role Slug names whose Rack you want to fetch.",
+          "description": "Specify comma separated values of Role Slug names whose Rack you want to fetch."
+        },
+        {
+          "title": "Tags",
+          "name": "tag",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Tags names whose Rack you want to fetch.",
+          "description": "Specify comma separated values of Tags names whose Rack you want to fetch."
+        },
+        {
+          "title": "Type",
+          "name": "type",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Type of Rack which you want to fetch.",
+          "description": "Specify comma separated values of Type of Rack which you want to fetch."
         },
         {
           "title": "Search Query",
@@ -1991,6 +2151,16 @@
           "description": "Specify comma separated values of IDs which you want to fetch."
         },
         {
+          "title": "Name",
+          "name": "name",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Device names which you want to fetch.",
+          "description": "Specify comma separated values of Device names which you want to fetch."
+        },
+        {
           "title": "Region IDs",
           "name": "region",
           "visible": true,
@@ -2007,8 +2177,8 @@
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify comma separated values of Site names whose Devices you want to fetch.",
-          "description": "Specify comma separated values of Site names whose Devices you want to fetch."
+          "tooltip": "Specify comma separated values of Site Slug names whose Devices you want to fetch.",
+          "description": "Specify comma separated values of Site Slug names whose Devices you want to fetch."
         },
         {
           "title": "Rack IDs",
@@ -2019,6 +2189,26 @@
           "type": "text",
           "tooltip": "Specify comma separated values of Rack IDs whose Devices you want to fetch.",
           "description": "Specify comma separated values of Rack IDs whose Devices you want to fetch."
+        },
+        {
+          "title": "Tags",
+          "name": "tag",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Tags names whose Devices you want to fetch.",
+          "description": "Specify comma separated values of Tags names whose Devices you want to fetch."
+        },
+        {
+          "title": "Type",
+          "name": "type",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Type of Devices which you want to fetch.",
+          "description": "Specify comma separated values of Type of Devices which you want to fetch."
         },
         {
           "title": "Asset Tags",
@@ -2037,8 +2227,8 @@
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify comma separated values of Tenant names whose Devices you want to fetch.",
-          "description": "Specify comma separated values of Tenant names whose Devices you want to fetch."
+          "tooltip": "Specify comma separated values of Tenant Slug names whose Devices you want to fetch.",
+          "description": "Specify comma separated values of Tenant Slug names whose Devices you want to fetch."
         },
         {
           "title": "Search Query",
@@ -2495,55 +2685,101 @@
           "description": "Specify the unique integer value identifying this Device in Netbox instance."
         },
         {
-          "title": "Fields to be updated",
-          "name": "patch_fields",
+          "title": "Name",
+          "name": "name",
           "visible": true,
-          "required": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the Device names which you want to update.",
+          "description": "Specify the Device names which you want to update."
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the Description of the Device you want to update.",
+          "description": "Specify the Description of the Device you want to update."
+        },
+        {
+          "title": "Status",
+          "name": "status",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the operational status of the object you want to update.",
+          "description": "Specify the operational status of the object you want to update."
+        },
+        {
+          "title": "Site ID",
+          "name": "site",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the ID of Site which you want to update in Device.",
+          "description": "Specify the ID of Site which you want to update in Device."
+        },
+        {
+          "title": "Comments",
+          "name": "comments",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the Comment which you want to update in Device object.",
+          "description": "Specify the Comment which you want to update in Device object."
+        },
+        {
+          "title": "Rack ID",
+          "name": "rack",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify the Rack ID which you want to update in Device object.",
+          "description": "Specify the Rack ID which you want to update in Device object."
+        },
+        {
+          "title": "Tags",
+          "name": "tag",
+          "visible": true,
+          "required": false,
           "editable": true,
           "type": "json",
-          "value": {
-            "name": "",
-            "device_type": 0,
-            "role": 0,
-            "tenant": 0,
-            "platform": 0,
-            "serial": "",
-            "asset_tag": "",
-            "site": 0,
-            "location": 0,
-            "rack": 0,
-            "position": 0,
-            "face": "",
-            "latitude": 0,
-            "longitude": 0,
-            "status": "",
-            "airflow": "",
-            "primary_ip4": 0,
-            "primary_ip6": 0,
-            "oob_ip": 0,
-            "cluster": 0,
-            "virtual_chassis": 0,
-            "vc_position": 0,
-            "vc_priority": 0,
-            "description": "",
-            "comments": "",
-            "config_template": 0,
-            "local_context_data": "",
-            "tags": [
-              {
-                "name": "",
-                "slug": "",
-                "color": ""
-              }
-            ],
-            "custom_fields": {
-              "additionalProp1": "",
-              "additionalProp2": "",
-              "additionalProp3": ""
+          "placeholder": [
+            {
+              "name": "string",
+              "slug": "4B4U8cPKO15uGezwyTFlWLXLPvpG",
+              "color": "0030aa"
             }
-          },
-          "tooltip": "Specify the fields and field values that you want to update in VM object on Netbox instance.",
-          "description": "Specify the fields and field values that you want to update in VM object on Netbox instance."
+          ],
+          "tooltip": "Specify values of Tags in json format whose Devices you want to update.",
+          "description": "Specify values of Tags in json format whose Devices you want to update."
+        },
+        {
+          "title": "Type",
+          "name": "type",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify Type of Devices which you want to update.",
+          "description": "Specify Type of Devices which you want to update."
+        },
+        {
+          "title": "Other Fields",
+          "tooltip": "Specify fields in the JSON format key-value pair which is to be updated in Device object",
+          "description": "Specify fields in the JSON format key-value pair which is to be updated in Device object",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "json",
+          "name": "other_fields"
         }
       ]
     },
@@ -2649,6 +2885,26 @@
           "type": "text",
           "tooltip": "Specify comma separated values of IDs which you want to fetch.",
           "description": "Specify comma separated values of IDs which you want to fetch."
+        },
+        {
+          "title": "Tags",
+          "name": "tag",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Tags names whose Cables you want to fetch.",
+          "description": "Specify comma separated values of Tags names whose Cables you want to fetch."
+        },
+        {
+          "title": "Type",
+          "name": "type",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify comma separated values of Type of Cables which you want to fetch.",
+          "description": "Specify comma separated values of Type of Cables which you want to fetch."
         },
         {
           "title": "Search Query",
