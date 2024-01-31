@@ -189,13 +189,9 @@
           "visible": true,
           "required": false,
           "editable": true,
-          "type": "select",
-          "options": [
-            "IPv4",
-            "IPv6"
-          ],
-          "tooltip": "Specify the search query with which you want to filter the results.",
-          "description": "Specify the search query with which you want to filter the results."
+          "type": "integer",
+          "tooltip": "Specify the family number with which you want to filter the results.",
+          "description": "Specify the family number with which you want to filter the results."
         },
         {
           "title": "Status",
@@ -218,8 +214,8 @@
           "description": "Specify the field to use when ordering the results."
         },
         {
-          "title": "offset",
-          "name": "Offset",
+          "title": "Offset",
+          "name": "offset",
           "visible": true,
           "required": false,
           "editable": true,
@@ -640,13 +636,9 @@
           "visible": true,
           "required": false,
           "editable": true,
-          "type": "select",
-          "options": [
-            "IPv4",
-            "IPv6"
-          ],
-          "tooltip": "Specify the search query with which you want to filter the results.",
-          "description": "Specify the search query with which you want to filter the results."
+          "type": "integer",
+          "tooltip": "Specify the family number with which you want to filter the results.",
+          "description": "Specify the family number with which you want to filter the results."
         },
         {
           "title": "Status",
@@ -669,8 +661,8 @@
           "description": "Specify the field to use when ordering the results."
         },
         {
-          "title": "offset",
-          "name": "Offset",
+          "title": "Offset",
+          "name": "offset",
           "visible": true,
           "required": false,
           "editable": true,
@@ -1122,16 +1114,6 @@
           "description": "Specify the search query with which you want to filter the results."
         },
         {
-          "title": "Status",
-          "name": "status",
-          "visible": true,
-          "required": false,
-          "editable": true,
-          "type": "text",
-          "tooltip": "Specify the operational status of the object you want to fetch.",
-          "description": "Specify the operational status of the object you want to fetch."
-        },
-        {
           "title": "Order by Field",
           "name": "ordering",
           "visible": true,
@@ -1142,8 +1124,8 @@
           "description": "Specify the field to use when ordering the results."
         },
         {
-          "title": "offset",
-          "name": "Offset",
+          "title": "Offset",
+          "name": "offset",
           "visible": true,
           "required": false,
           "editable": true,
@@ -1635,8 +1617,8 @@
           "description": "Specify the field to use when ordering the results."
         },
         {
-          "title": "offset",
-          "name": "Offset",
+          "title": "Offset",
+          "name": "offset",
           "visible": true,
           "required": false,
           "editable": true,
@@ -2202,7 +2184,7 @@
         },
         {
           "title": "Type",
-          "name": "type",
+          "name": "device_type",
           "visible": true,
           "required": false,
           "editable": true,
@@ -2261,8 +2243,8 @@
           "description": "Specify the field to use when ordering the results."
         },
         {
-          "title": "offset",
-          "name": "Offset",
+          "title": "Offset",
+          "name": "offset",
           "visible": true,
           "required": false,
           "editable": true,
@@ -2937,8 +2919,8 @@
           "description": "Specify the field to use when ordering the results."
         },
         {
-          "title": "offset",
-          "name": "Offset",
+          "title": "Offset",
+          "name": "offset",
           "visible": true,
           "required": false,
           "editable": true,
