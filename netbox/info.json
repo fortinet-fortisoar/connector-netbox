@@ -144,14 +144,14 @@
           "description": "Specify comma separated values of IDs which you want to fetch."
         },
         {
-          "title": "Name",
-          "name": "name",
+          "title": "Address",
+          "name": "address",
           "visible": true,
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify comma separated values of Prefix names which you want to fetch.",
-          "description": "Specify comma separated values of Prefix names which you want to fetch."
+          "tooltip": "Specify comma separated values of Addresses value whose IP Address object you want to fetch.",
+          "description": "Specify comma separated values of Addresses value whose IP Address object you want to fetch."
         },
         {
           "title": "Roles",
@@ -160,8 +160,8 @@
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify comma separated values of Role Slug names whose Prefix you want to fetch.",
-          "description": "Specify comma separated values of Role Slug names whose Prefix you want to fetch."
+          "tooltip": "Specify comma separated values of Role whose IP Address you want to fetch.",
+          "description": "Specify comma separated values of Role whose IP Address you want to fetch."
         },
         {
           "title": "Tags",
@@ -170,8 +170,8 @@
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify comma separated values of Tags names whose Prefix you want to fetch.",
-          "description": "Specify comma separated values of Tags names whose Prefix you want to fetch."
+          "tooltip": "Specify comma separated values of Tags names whose IP Address you want to fetch.",
+          "description": "Specify comma separated values of Tags names whose IP Address you want to fetch."
         },
         {
           "title": "Search",
@@ -189,13 +189,9 @@
           "visible": true,
           "required": false,
           "editable": true,
-          "type": "select",
-          "options": [
-            "IPv4",
-            "IPv6"
-          ],
-          "tooltip": "Specify the search query with which you want to filter the results.",
-          "description": "Specify the search query with which you want to filter the results."
+          "type": "integer",
+          "tooltip": "Specify the family number with which you want to filter the results.",
+          "description": "Specify the family number with which you want to filter the results."
         },
         {
           "title": "Status",
@@ -218,8 +214,8 @@
           "description": "Specify the field to use when ordering the results."
         },
         {
-          "title": "offset",
-          "name": "Offset",
+          "title": "Offset",
+          "name": "offset",
           "visible": true,
           "required": false,
           "editable": true,
@@ -640,13 +636,9 @@
           "visible": true,
           "required": false,
           "editable": true,
-          "type": "select",
-          "options": [
-            "IPv4",
-            "IPv6"
-          ],
-          "tooltip": "Specify the search query with which you want to filter the results.",
-          "description": "Specify the search query with which you want to filter the results."
+          "type": "integer",
+          "tooltip": "Specify the family number with which you want to filter the results.",
+          "description": "Specify the family number with which you want to filter the results."
         },
         {
           "title": "Status",
@@ -669,8 +661,8 @@
           "description": "Specify the field to use when ordering the results."
         },
         {
-          "title": "offset",
-          "name": "Offset",
+          "title": "Offset",
+          "name": "offset",
           "visible": true,
           "required": false,
           "editable": true,
@@ -1122,16 +1114,6 @@
           "description": "Specify the search query with which you want to filter the results."
         },
         {
-          "title": "Status",
-          "name": "status",
-          "visible": true,
-          "required": false,
-          "editable": true,
-          "type": "text",
-          "tooltip": "Specify the operational status of the object you want to fetch.",
-          "description": "Specify the operational status of the object you want to fetch."
-        },
-        {
           "title": "Order by Field",
           "name": "ordering",
           "visible": true,
@@ -1142,8 +1124,8 @@
           "description": "Specify the field to use when ordering the results."
         },
         {
-          "title": "offset",
-          "name": "Offset",
+          "title": "Offset",
+          "name": "offset",
           "visible": true,
           "required": false,
           "editable": true,
@@ -1601,8 +1583,8 @@
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify comma separated values of Type of Rack which you want to fetch.",
-          "description": "Specify comma separated values of Type of Rack which you want to fetch."
+          "tooltip": "Specify comma separated values of Type of Rack (Slug Names) which you want to fetch.",
+          "description": "Specify comma separated values of Type of Rack (Slug Names) which you want to fetch."
         },
         {
           "title": "Search Query",
@@ -1635,8 +1617,8 @@
           "description": "Specify the field to use when ordering the results."
         },
         {
-          "title": "offset",
-          "name": "Offset",
+          "title": "Offset",
+          "name": "offset",
           "visible": true,
           "required": false,
           "editable": true,
@@ -2162,7 +2144,7 @@
         },
         {
           "title": "Region IDs",
-          "name": "region",
+          "name": "region_id",
           "visible": true,
           "required": false,
           "editable": true,
@@ -2201,14 +2183,14 @@
           "description": "Specify comma separated values of Tags names whose Devices you want to fetch."
         },
         {
-          "title": "Type",
-          "name": "type",
+          "title": "Device Type",
+          "name": "device_type",
           "visible": true,
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify comma separated values of Type of Devices which you want to fetch.",
-          "description": "Specify comma separated values of Type of Devices which you want to fetch."
+          "tooltip": "Specify comma separated values of Type of Devices (Slug names) which you want to fetch.",
+          "description": "Specify comma separated values of Type of Devices (Slug names) which you want to fetch."
         },
         {
           "title": "Asset Tags",
@@ -2261,8 +2243,8 @@
           "description": "Specify the field to use when ordering the results."
         },
         {
-          "title": "offset",
-          "name": "Offset",
+          "title": "Offset",
+          "name": "offset",
           "visible": true,
           "required": false,
           "editable": true,
@@ -2685,6 +2667,16 @@
           "description": "Specify the unique integer value identifying this Device in Netbox instance."
         },
         {
+          "title": "Type ID",
+          "name": "device_type",
+          "visible": true,
+          "required": false,
+          "editable": true,
+          "type": "text",
+          "tooltip": "Specify Type ID which you want to update.",
+          "description": "Specify Type ID which you want to update."
+        },
+        {
           "title": "Name",
           "name": "name",
           "visible": true,
@@ -2751,7 +2743,7 @@
           "required": false,
           "editable": true,
           "type": "json",
-          "placeholder": [
+          "value": [
             {
               "name": "string",
               "slug": "4B4U8cPKO15uGezwyTFlWLXLPvpG",
@@ -2760,16 +2752,6 @@
           ],
           "tooltip": "Specify values of Tags in json format whose Devices you want to update.",
           "description": "Specify values of Tags in json format whose Devices you want to update."
-        },
-        {
-          "title": "Type",
-          "name": "type",
-          "visible": true,
-          "required": false,
-          "editable": true,
-          "type": "text",
-          "tooltip": "Specify Type of Devices which you want to update.",
-          "description": "Specify Type of Devices which you want to update."
         },
         {
           "title": "Other Fields",
@@ -2893,8 +2875,8 @@
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify comma separated values of Tags names whose Cables you want to fetch.",
-          "description": "Specify comma separated values of Tags names whose Cables you want to fetch."
+          "tooltip": "Specify comma separated values of Tags Slug names whose Cables you want to fetch.",
+          "description": "Specify comma separated values of Tags Slug names whose Cables you want to fetch."
         },
         {
           "title": "Type",
@@ -2913,8 +2895,8 @@
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify the search query with which you want to filter the results.",
-          "description": "Specify the search query with which you want to filter the results."
+          "tooltip": "Specify the search query with which you want to filter the results. Ex:- label name of Cable",
+          "description": "Specify the search query with which you want to filter the results. Ex:- label name of Cable"
         },
         {
           "title": "Status",
@@ -2937,8 +2919,8 @@
           "description": "Specify the field to use when ordering the results."
         },
         {
-          "title": "offset",
-          "name": "Offset",
+          "title": "Offset",
+          "name": "offset",
           "visible": true,
           "required": false,
           "editable": true,
