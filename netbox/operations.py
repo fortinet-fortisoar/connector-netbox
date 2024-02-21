@@ -379,12 +379,11 @@ def _check_health(config):
 
 
 def _build_payload(params, use_csv_params=True):
-    logger.info(f"Inside Build Payload params is {params}")
     if use_csv_params:
         csv_params = ["site", "asset_tag", "tenant", "tag", "type", "name", "role", "prefix", "device_type", "address"]
         for p in csv_params:
             if params.get(p) is not None and params.get(p) != "":
-                params.update({f"{p}": params.get(p).split(",")})
+                params.update({f"{p}": [param.strip() for param in params.get(p).split(",")]})
 
     if params.get('family') is not None and params.get('family') != "":
         params.update({'family': format_dict.get(params.get('family'))})
