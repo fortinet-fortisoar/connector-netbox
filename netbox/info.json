@@ -189,7 +189,11 @@
           "visible": true,
           "required": false,
           "editable": true,
-          "type": "integer",
+          "type": "select",
+          "options": [
+            "IPv4",
+            "IPv6"
+          ],
           "tooltip": "Specify the family number with which you want to filter the results.",
           "description": "Specify the family number with which you want to filter the results."
         },
@@ -636,7 +640,11 @@
           "visible": true,
           "required": false,
           "editable": true,
-          "type": "integer",
+          "type": "select",
+          "options": [
+            "IPv4",
+            "IPv6"
+          ],
           "tooltip": "Specify the family number with which you want to filter the results.",
           "description": "Specify the family number with which you want to filter the results."
         },
@@ -1100,8 +1108,8 @@
           "required": false,
           "editable": true,
           "type": "text",
-          "tooltip": "Specify the search query with which you want to filter the results.",
-          "description": "Specify the search query with which you want to filter the results."
+          "tooltip": "Specify the operational status of the object you want to fetch.",
+          "description": "Specify the operational status of the object you want to fetch."
         },
         {
           "title": "Search Query",
@@ -2738,7 +2746,7 @@
         },
         {
           "title": "Tags",
-          "name": "tag",
+          "name": "tags",
           "visible": true,
           "required": false,
           "editable": true,

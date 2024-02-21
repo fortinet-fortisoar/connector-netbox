@@ -2,16 +2,16 @@
   "type": "workflow_collections",
   "data": [
     {
-      "uuid": "a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+      "uuid": "c2413292-aace-4469-9333-e9e7d8c712fc",
       "@type": "WorkflowCollection",
       "workflows": [
         {
           "@type": "Workflow",
-          "uuid": "82e00a79-6ea0-440e-b725-fa9bb25f6432",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "8263201f-2984-4d4d-b64f-3204e47495e9",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "b534f62b-3131-4b83-86a8-1eed1d56c029",
+              "uuid": "4c4a1d6c-36b6-4f3a-8ae3-df0c984e3d58",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -28,7 +28,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "003c1e72-3d07-4be1-a1c1-58a84e34d3c1",
+              "uuid": "eeca7565-487f-4953-8b8a-9842815ea064",
               "@type": "WorkflowStep",
               "name": "Get IP Address List",
               "description": null,
@@ -38,7 +38,7 @@
                 "config": "",
                 "params": {
                   "id": "",
-                  "name": "",
+                  "address": "",
                   "role": "",
                   "tag": "",
                   "q": "",
@@ -72,26 +72,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/b534f62b-3131-4b83-86a8-1eed1d56c029",
+          "triggerStep": "/api/3/workflow_steps/4c4a1d6c-36b6-4f3a-8ae3-df0c984e3d58",
           "routes": [
             {
-              "uuid": "705659ce-41ab-4ede-8dc9-c5841bc8f090",
+              "uuid": "3937ebf1-0b13-44b3-be3a-d0434840fbee",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get IP Address List",
-              "sourceStep": "/api/3/workflow_steps/b534f62b-3131-4b83-86a8-1eed1d56c029",
-              "targetStep": "/api/3/workflow_steps/003c1e72-3d07-4be1-a1c1-58a84e34d3c1"
+              "sourceStep": "/api/3/workflow_steps/4c4a1d6c-36b6-4f3a-8ae3-df0c984e3d58",
+              "targetStep": "/api/3/workflow_steps/eeca7565-487f-4953-8b8a-9842815ea064"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "e5b72157-732b-4cb9-8b24-eda0d5ccc8d3",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "94133995-90d7-422e-8430-0deef23887c7",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "2a4e59a3-e1d3-4a02-b87a-a752d5ce40ee",
+              "uuid": "52f14d6e-28a9-4382-9c24-b2f0fe688030",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -108,7 +108,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "147250f5-86a9-4bac-b838-1640be059eb0",
+              "uuid": "19e319a2-589a-4cc4-92c7-a0964d0e6d38",
               "@type": "WorkflowStep",
               "name": "Get IP Address",
               "description": null,
@@ -142,26 +142,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/2a4e59a3-e1d3-4a02-b87a-a752d5ce40ee",
+          "triggerStep": "/api/3/workflow_steps/52f14d6e-28a9-4382-9c24-b2f0fe688030",
           "routes": [
             {
-              "uuid": "8393fa35-db09-4901-8399-42e8e97d6780",
+              "uuid": "6116f292-ab73-405b-a71c-1f1f4f47ab28",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get IP Address",
-              "sourceStep": "/api/3/workflow_steps/2a4e59a3-e1d3-4a02-b87a-a752d5ce40ee",
-              "targetStep": "/api/3/workflow_steps/147250f5-86a9-4bac-b838-1640be059eb0"
+              "sourceStep": "/api/3/workflow_steps/52f14d6e-28a9-4382-9c24-b2f0fe688030",
+              "targetStep": "/api/3/workflow_steps/19e319a2-589a-4cc4-92c7-a0964d0e6d38"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "b1e63e98-e597-480e-8432-f3677fed5772",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "0692a41c-7cc5-4a9e-b6fe-ff336436ff2f",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "a2696a00-7781-4cfd-b62d-0464bf7ca90a",
+              "uuid": "4ea75ad6-d5c9-4d3a-bb4b-07e617aa0ca5",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -178,7 +178,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "e761bc4b-b821-4f78-83ed-a574f8541abe",
+              "uuid": "5dbc6b6e-8f4d-4b25-89ee-b8b3f33adbb8",
               "@type": "WorkflowStep",
               "name": "Update IP Address",
               "description": null,
@@ -237,26 +237,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/a2696a00-7781-4cfd-b62d-0464bf7ca90a",
+          "triggerStep": "/api/3/workflow_steps/4ea75ad6-d5c9-4d3a-bb4b-07e617aa0ca5",
           "routes": [
             {
-              "uuid": "0cb91034-b571-4411-a461-3a78d19e327b",
+              "uuid": "fc092f46-7af6-4b4e-9249-591d566d8006",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Update IP Address",
-              "sourceStep": "/api/3/workflow_steps/a2696a00-7781-4cfd-b62d-0464bf7ca90a",
-              "targetStep": "/api/3/workflow_steps/e761bc4b-b821-4f78-83ed-a574f8541abe"
+              "sourceStep": "/api/3/workflow_steps/4ea75ad6-d5c9-4d3a-bb4b-07e617aa0ca5",
+              "targetStep": "/api/3/workflow_steps/5dbc6b6e-8f4d-4b25-89ee-b8b3f33adbb8"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "d5f325ad-b318-433f-9de4-bbc7106efc24",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "9f47943d-4ef9-40a8-a636-6d71d4d0c11e",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "c2e2e93a-98fd-4a60-bfcc-f92c9262f7c9",
+              "uuid": "49f69ed8-67af-4654-9a1e-89afc78ad18b",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -273,7 +273,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "cd50e1ad-bf4c-4729-8b63-119df26b38f3",
+              "uuid": "f12cf4fd-74de-4e77-b8db-5f5bffe02912",
               "@type": "WorkflowStep",
               "name": "Delete IP Address",
               "description": null,
@@ -307,26 +307,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/c2e2e93a-98fd-4a60-bfcc-f92c9262f7c9",
+          "triggerStep": "/api/3/workflow_steps/49f69ed8-67af-4654-9a1e-89afc78ad18b",
           "routes": [
             {
-              "uuid": "30771501-8f47-4452-a320-6a0d87a28d7e",
+              "uuid": "55bcdcbf-b676-48fd-81f7-9f95622732a7",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Delete IP Address",
-              "sourceStep": "/api/3/workflow_steps/c2e2e93a-98fd-4a60-bfcc-f92c9262f7c9",
-              "targetStep": "/api/3/workflow_steps/cd50e1ad-bf4c-4729-8b63-119df26b38f3"
+              "sourceStep": "/api/3/workflow_steps/49f69ed8-67af-4654-9a1e-89afc78ad18b",
+              "targetStep": "/api/3/workflow_steps/f12cf4fd-74de-4e77-b8db-5f5bffe02912"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "5d08af3c-dad2-4a55-8a63-034c3f7e16fd",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "2b1cd92f-ab8a-4da8-a52e-66fd35a11179",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "e965d0b6-8352-4d98-91dd-4c35555c22ec",
+              "uuid": "c8250984-e998-4268-ac31-bd4876ce0f05",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -343,7 +343,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "0bc840a7-68a6-45ec-b81d-77413e13c9e9",
+              "uuid": "4fb34ded-704e-43f0-9ae3-5762903fe50c",
               "@type": "WorkflowStep",
               "name": "Get Prefix List",
               "description": null,
@@ -388,26 +388,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/e965d0b6-8352-4d98-91dd-4c35555c22ec",
+          "triggerStep": "/api/3/workflow_steps/c8250984-e998-4268-ac31-bd4876ce0f05",
           "routes": [
             {
-              "uuid": "99ee2cfc-7585-4780-985b-647acf01f221",
+              "uuid": "118e2468-6501-4edd-9d3a-3667a6ab6844",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Prefix List",
-              "sourceStep": "/api/3/workflow_steps/e965d0b6-8352-4d98-91dd-4c35555c22ec",
-              "targetStep": "/api/3/workflow_steps/0bc840a7-68a6-45ec-b81d-77413e13c9e9"
+              "sourceStep": "/api/3/workflow_steps/c8250984-e998-4268-ac31-bd4876ce0f05",
+              "targetStep": "/api/3/workflow_steps/4fb34ded-704e-43f0-9ae3-5762903fe50c"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "480988c8-9316-4e45-adb2-090529afdafe",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "5b0743f9-2079-48f3-abc2-4a2453644ee9",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "a587a867-4946-48a1-98d0-3abe683fe79e",
+              "uuid": "f7de0985-4c16-42da-b78d-8baae6130ec3",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -424,7 +424,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "b14756ff-2664-4b61-bf75-aa584c55e23f",
+              "uuid": "b7b779d1-6861-4d25-8d40-07929d712207",
               "@type": "WorkflowStep",
               "name": "Get Prefix",
               "description": null,
@@ -458,26 +458,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/a587a867-4946-48a1-98d0-3abe683fe79e",
+          "triggerStep": "/api/3/workflow_steps/f7de0985-4c16-42da-b78d-8baae6130ec3",
           "routes": [
             {
-              "uuid": "deb0b566-2740-43fd-b876-469df952ddc4",
+              "uuid": "8e64ac54-68a7-4ff5-96fc-1dd3f941506a",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Prefix",
-              "sourceStep": "/api/3/workflow_steps/a587a867-4946-48a1-98d0-3abe683fe79e",
-              "targetStep": "/api/3/workflow_steps/b14756ff-2664-4b61-bf75-aa584c55e23f"
+              "sourceStep": "/api/3/workflow_steps/f7de0985-4c16-42da-b78d-8baae6130ec3",
+              "targetStep": "/api/3/workflow_steps/b7b779d1-6861-4d25-8d40-07929d712207"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "3b9ed512-0426-4c3c-8e99-c2e6f83ef3ac",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "2954b286-0343-4b1d-9807-eaf728d4c485",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "fc71fdb1-18b0-45e2-b441-91cc8bd79a80",
+              "uuid": "11fcd43d-d859-4797-846f-950ad0d0cb62",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -494,7 +494,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "b7cd91f4-9004-4d44-8ae0-c299db2b825b",
+              "uuid": "2970e57b-4050-43f2-a735-a17215ca7e8b",
               "@type": "WorkflowStep",
               "name": "Update Prefix",
               "description": null,
@@ -553,26 +553,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/fc71fdb1-18b0-45e2-b441-91cc8bd79a80",
+          "triggerStep": "/api/3/workflow_steps/11fcd43d-d859-4797-846f-950ad0d0cb62",
           "routes": [
             {
-              "uuid": "268f6c5d-d156-4b61-828b-c031b6536496",
+              "uuid": "3fbc0470-405a-4d72-9b94-a690b8d2d621",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Update Prefix",
-              "sourceStep": "/api/3/workflow_steps/fc71fdb1-18b0-45e2-b441-91cc8bd79a80",
-              "targetStep": "/api/3/workflow_steps/b7cd91f4-9004-4d44-8ae0-c299db2b825b"
+              "sourceStep": "/api/3/workflow_steps/11fcd43d-d859-4797-846f-950ad0d0cb62",
+              "targetStep": "/api/3/workflow_steps/2970e57b-4050-43f2-a735-a17215ca7e8b"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "10d909da-ba4b-4d2a-9f37-f952289f9788",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "47e77fc8-37d0-4423-a405-8b5e0c42e78c",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "8d5a62cc-ed82-4307-a714-3fdedaca5a54",
+              "uuid": "17c1ef1f-66d3-4351-9c6e-3e97c896683c",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -589,7 +589,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "406b46f7-a5d8-4817-bf5d-5cbe418cd142",
+              "uuid": "b6d2933e-468a-4b97-9e31-3268a9cc451b",
               "@type": "WorkflowStep",
               "name": "Delete Prefix",
               "description": null,
@@ -623,26 +623,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/8d5a62cc-ed82-4307-a714-3fdedaca5a54",
+          "triggerStep": "/api/3/workflow_steps/17c1ef1f-66d3-4351-9c6e-3e97c896683c",
           "routes": [
             {
-              "uuid": "5e8a9a1d-5cc5-4446-8133-caadad33892e",
+              "uuid": "45849fcd-0f84-4a25-a572-876185c83e18",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Delete Prefix",
-              "sourceStep": "/api/3/workflow_steps/8d5a62cc-ed82-4307-a714-3fdedaca5a54",
-              "targetStep": "/api/3/workflow_steps/406b46f7-a5d8-4817-bf5d-5cbe418cd142"
+              "sourceStep": "/api/3/workflow_steps/17c1ef1f-66d3-4351-9c6e-3e97c896683c",
+              "targetStep": "/api/3/workflow_steps/b6d2933e-468a-4b97-9e31-3268a9cc451b"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "41f8defb-a642-4a6b-a96c-19bbfc7b58c4",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "31ef3b15-e740-4486-b7f5-3c1b237dbf90",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "1ab362ed-1174-4aa3-97d8-17c20148b584",
+              "uuid": "7b460187-d90b-45fe-82c3-d59e456ee565",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -659,7 +659,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "1f24ae0c-35dd-4a2e-8c1a-5399b7cce053",
+              "uuid": "de0a8468-79e1-4db9-b433-c28c95eef91d",
               "@type": "WorkflowStep",
               "name": "Get Virtual Machines List",
               "description": null,
@@ -703,26 +703,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/1ab362ed-1174-4aa3-97d8-17c20148b584",
+          "triggerStep": "/api/3/workflow_steps/7b460187-d90b-45fe-82c3-d59e456ee565",
           "routes": [
             {
-              "uuid": "41e551c5-bde9-428d-aaa6-96d26a17de48",
+              "uuid": "859ec403-7d47-4883-a639-7a2febfd93f8",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Virtual Machines List",
-              "sourceStep": "/api/3/workflow_steps/1ab362ed-1174-4aa3-97d8-17c20148b584",
-              "targetStep": "/api/3/workflow_steps/1f24ae0c-35dd-4a2e-8c1a-5399b7cce053"
+              "sourceStep": "/api/3/workflow_steps/7b460187-d90b-45fe-82c3-d59e456ee565",
+              "targetStep": "/api/3/workflow_steps/de0a8468-79e1-4db9-b433-c28c95eef91d"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "a7d1ff2a-17bd-4952-8d9e-d9e0fe5939b3",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "8f5c6d37-7d06-4f53-9c9a-12cd9157cbd4",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "fb7931bc-eb62-445f-b2bc-6872bc8010a1",
+              "uuid": "ad318982-c296-4601-91f7-909d15e392a1",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -739,7 +739,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "f64bc657-9c23-45a1-8026-f3f0def7b9c8",
+              "uuid": "aa257770-4b07-437e-9aff-01f5c4d23e87",
               "@type": "WorkflowStep",
               "name": "Get Virtual Machine",
               "description": null,
@@ -773,26 +773,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/fb7931bc-eb62-445f-b2bc-6872bc8010a1",
+          "triggerStep": "/api/3/workflow_steps/ad318982-c296-4601-91f7-909d15e392a1",
           "routes": [
             {
-              "uuid": "0135d082-5b88-478e-a689-6ab5199ed6b3",
+              "uuid": "e0da0c9a-d845-4d4c-8690-204552b3b806",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Virtual Machine",
-              "sourceStep": "/api/3/workflow_steps/fb7931bc-eb62-445f-b2bc-6872bc8010a1",
-              "targetStep": "/api/3/workflow_steps/f64bc657-9c23-45a1-8026-f3f0def7b9c8"
+              "sourceStep": "/api/3/workflow_steps/ad318982-c296-4601-91f7-909d15e392a1",
+              "targetStep": "/api/3/workflow_steps/aa257770-4b07-437e-9aff-01f5c4d23e87"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "4766f009-bfa5-442f-b44e-0db454896899",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "c80ee649-c32d-4919-91bf-5a5f98674f1a",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "4ae8728b-205b-4e50-ade2-c968b5ac4763",
+              "uuid": "17d3f330-3e03-4015-a261-612df4a3c890",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -809,7 +809,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "3205c852-793e-48b9-84c0-c46f40da74ff",
+              "uuid": "e8e855be-f87a-424e-9786-213937cffd57",
               "@type": "WorkflowStep",
               "name": "Update Virtual Machine",
               "description": null,
@@ -873,26 +873,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/4ae8728b-205b-4e50-ade2-c968b5ac4763",
+          "triggerStep": "/api/3/workflow_steps/17d3f330-3e03-4015-a261-612df4a3c890",
           "routes": [
             {
-              "uuid": "34be887e-344f-455c-a6ec-b6642ee4b2b5",
+              "uuid": "821277be-ca17-4501-936a-2b6058adf8d3",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Update Virtual Machine",
-              "sourceStep": "/api/3/workflow_steps/4ae8728b-205b-4e50-ade2-c968b5ac4763",
-              "targetStep": "/api/3/workflow_steps/3205c852-793e-48b9-84c0-c46f40da74ff"
+              "sourceStep": "/api/3/workflow_steps/17d3f330-3e03-4015-a261-612df4a3c890",
+              "targetStep": "/api/3/workflow_steps/e8e855be-f87a-424e-9786-213937cffd57"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "9eb9100f-e14a-47ca-9518-1868f92f55d4",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "fc420b72-46c7-40c4-b9d8-0248ced29587",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "55d51da4-467a-4a10-9d03-5cace602522b",
+              "uuid": "e189cd2d-c75a-4e6d-83e8-bd1d9747c14d",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -909,7 +909,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "228eee57-a848-416a-aa53-332a5e7b2c8e",
+              "uuid": "c37ef00f-7fb0-4075-9e30-07530a9d112e",
               "@type": "WorkflowStep",
               "name": "Delete Virtual Machine",
               "description": null,
@@ -943,26 +943,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/55d51da4-467a-4a10-9d03-5cace602522b",
+          "triggerStep": "/api/3/workflow_steps/e189cd2d-c75a-4e6d-83e8-bd1d9747c14d",
           "routes": [
             {
-              "uuid": "ad02aefb-07df-4a4d-bbe8-246517db7c38",
+              "uuid": "669b37bf-ac97-4be4-abf6-7e7ef7900732",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Delete Virtual Machine",
-              "sourceStep": "/api/3/workflow_steps/55d51da4-467a-4a10-9d03-5cace602522b",
-              "targetStep": "/api/3/workflow_steps/228eee57-a848-416a-aa53-332a5e7b2c8e"
+              "sourceStep": "/api/3/workflow_steps/e189cd2d-c75a-4e6d-83e8-bd1d9747c14d",
+              "targetStep": "/api/3/workflow_steps/c37ef00f-7fb0-4075-9e30-07530a9d112e"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "2765e9e4-8a02-47ca-9af7-87bc2fbcd210",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "33fbcacd-6815-4f6c-b9e5-c1d9714dce14",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "54314f32-430f-4231-9f34-e2b844531f61",
+              "uuid": "8c8f1779-cf8b-4129-b480-645126c5e980",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -979,7 +979,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "22c035cc-a345-4930-9eac-9dc4233978d2",
+              "uuid": "5b310b7a-cb65-45f0-b540-2e6a359f7e59",
               "@type": "WorkflowStep",
               "name": "Get Rack List",
               "description": null,
@@ -1024,26 +1024,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/54314f32-430f-4231-9f34-e2b844531f61",
+          "triggerStep": "/api/3/workflow_steps/8c8f1779-cf8b-4129-b480-645126c5e980",
           "routes": [
             {
-              "uuid": "5c0430b4-b9a9-48cf-9a5b-377699ad9131",
+              "uuid": "d3af899f-bdd6-47e9-999f-6ffb1ace81d3",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Rack List",
-              "sourceStep": "/api/3/workflow_steps/54314f32-430f-4231-9f34-e2b844531f61",
-              "targetStep": "/api/3/workflow_steps/22c035cc-a345-4930-9eac-9dc4233978d2"
+              "sourceStep": "/api/3/workflow_steps/8c8f1779-cf8b-4129-b480-645126c5e980",
+              "targetStep": "/api/3/workflow_steps/5b310b7a-cb65-45f0-b540-2e6a359f7e59"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "f7a24215-eee0-4ee4-a65a-726b2d722f0a",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "fc7b5850-01d8-4d3c-93dd-d2d79a005baf",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "ed94dd54-59eb-481a-8eaa-22f11fb6afbb",
+              "uuid": "235b7318-9a98-4497-a430-76525f64a321",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -1060,7 +1060,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "f48ee6f5-d068-4c20-83d8-108e9477e823",
+              "uuid": "e828cb58-aa6d-46ea-8d0e-a3cf53881a97",
               "@type": "WorkflowStep",
               "name": "Get Rack",
               "description": null,
@@ -1094,26 +1094,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/ed94dd54-59eb-481a-8eaa-22f11fb6afbb",
+          "triggerStep": "/api/3/workflow_steps/235b7318-9a98-4497-a430-76525f64a321",
           "routes": [
             {
-              "uuid": "57b5d69b-1643-49ff-b7d0-ac8a05d11fb4",
+              "uuid": "f853185b-9866-4236-8397-5d02dd4bed28",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Rack",
-              "sourceStep": "/api/3/workflow_steps/ed94dd54-59eb-481a-8eaa-22f11fb6afbb",
-              "targetStep": "/api/3/workflow_steps/f48ee6f5-d068-4c20-83d8-108e9477e823"
+              "sourceStep": "/api/3/workflow_steps/235b7318-9a98-4497-a430-76525f64a321",
+              "targetStep": "/api/3/workflow_steps/e828cb58-aa6d-46ea-8d0e-a3cf53881a97"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "8a815bae-92d6-4132-a58d-c1dc17333ce7",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "b73e09fc-f79e-42c3-ad12-8e56481a5f09",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "ed03630c-1a9f-4d8a-bac2-0106e09d8f29",
+              "uuid": "81bb1d58-3959-4d34-a69c-c87d73b6961b",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -1130,7 +1130,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "0c811c85-8098-41b0-a3dc-b0f344fa91df",
+              "uuid": "27d76caa-4347-469b-9075-e3a5a7cba281",
               "@type": "WorkflowStep",
               "name": "Update Rack",
               "description": null,
@@ -1201,26 +1201,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/ed03630c-1a9f-4d8a-bac2-0106e09d8f29",
+          "triggerStep": "/api/3/workflow_steps/81bb1d58-3959-4d34-a69c-c87d73b6961b",
           "routes": [
             {
-              "uuid": "f787916e-8bcf-4e09-a6ce-a85f56b7d6e9",
+              "uuid": "99152a0e-3865-407a-b824-b8f1f32f8c82",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Update Rack",
-              "sourceStep": "/api/3/workflow_steps/ed03630c-1a9f-4d8a-bac2-0106e09d8f29",
-              "targetStep": "/api/3/workflow_steps/0c811c85-8098-41b0-a3dc-b0f344fa91df"
+              "sourceStep": "/api/3/workflow_steps/81bb1d58-3959-4d34-a69c-c87d73b6961b",
+              "targetStep": "/api/3/workflow_steps/27d76caa-4347-469b-9075-e3a5a7cba281"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "de46b9c8-2e81-4448-8337-c62837b4d341",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "ec970e63-5198-48be-88b7-b9b9fbaffc23",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "ecef4c7c-f33f-4013-a085-517e811b5429",
+              "uuid": "e19780ec-0f2d-48a2-83c2-a5df39f1b5c5",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -1237,7 +1237,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "3c24c764-e08b-4b02-bbdf-6b1719d56ec2",
+              "uuid": "7a5ff1ea-754a-4ef3-b4f0-de651433b1ad",
               "@type": "WorkflowStep",
               "name": "Delete Rack",
               "description": null,
@@ -1271,26 +1271,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/ecef4c7c-f33f-4013-a085-517e811b5429",
+          "triggerStep": "/api/3/workflow_steps/e19780ec-0f2d-48a2-83c2-a5df39f1b5c5",
           "routes": [
             {
-              "uuid": "38dbb6d5-8d48-4dfd-9f81-8e8b48e1b8db",
+              "uuid": "97d8a14b-5c13-4107-af8e-8c44b1fd3466",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Delete Rack",
-              "sourceStep": "/api/3/workflow_steps/ecef4c7c-f33f-4013-a085-517e811b5429",
-              "targetStep": "/api/3/workflow_steps/3c24c764-e08b-4b02-bbdf-6b1719d56ec2"
+              "sourceStep": "/api/3/workflow_steps/e19780ec-0f2d-48a2-83c2-a5df39f1b5c5",
+              "targetStep": "/api/3/workflow_steps/7a5ff1ea-754a-4ef3-b4f0-de651433b1ad"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "b7cea992-d9ed-458e-98d4-5712578cc4e3",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "8095d787-0060-45a1-a904-1f3a8839fae3",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "5f8c823c-13b4-46a2-8e57-50e57677342c",
+              "uuid": "5d22f965-e09b-474b-b4c8-718eb61f1e64",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -1307,7 +1307,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "2c3e7937-fd95-4edb-9844-8780291e2e94",
+              "uuid": "cc54b015-5b48-470d-a01d-26979284f7b3",
               "@type": "WorkflowStep",
               "name": "Get Devices List",
               "description": null,
@@ -1355,26 +1355,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/5f8c823c-13b4-46a2-8e57-50e57677342c",
+          "triggerStep": "/api/3/workflow_steps/5d22f965-e09b-474b-b4c8-718eb61f1e64",
           "routes": [
             {
-              "uuid": "0697126e-7d79-4a5e-b1e6-d27fca52076e",
+              "uuid": "4541e2bf-e538-4531-96f7-40eb4a5758bc",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Devices List",
-              "sourceStep": "/api/3/workflow_steps/5f8c823c-13b4-46a2-8e57-50e57677342c",
-              "targetStep": "/api/3/workflow_steps/2c3e7937-fd95-4edb-9844-8780291e2e94"
+              "sourceStep": "/api/3/workflow_steps/5d22f965-e09b-474b-b4c8-718eb61f1e64",
+              "targetStep": "/api/3/workflow_steps/cc54b015-5b48-470d-a01d-26979284f7b3"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "5a0c2b27-930a-4c4e-b84e-1cb1e18db821",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "333ea4e3-de0a-4337-8d6c-9b22cd27d733",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "35e345e0-9f16-4ab3-ab63-c0620065d96b",
+              "uuid": "f2b4bc66-1013-4917-8f34-682465f7efd5",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -1391,7 +1391,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "920c250b-f729-4e8a-9c5b-e872a62cca47",
+              "uuid": "465bc060-ccba-48ee-9d47-22b5c915f165",
               "@type": "WorkflowStep",
               "name": "Get Device",
               "description": null,
@@ -1425,26 +1425,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/35e345e0-9f16-4ab3-ab63-c0620065d96b",
+          "triggerStep": "/api/3/workflow_steps/f2b4bc66-1013-4917-8f34-682465f7efd5",
           "routes": [
             {
-              "uuid": "d8478012-b70f-493a-93cf-68fcd843b8fa",
+              "uuid": "4fc089f8-7a65-4a92-90f8-7f7b04208e0d",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Device",
-              "sourceStep": "/api/3/workflow_steps/35e345e0-9f16-4ab3-ab63-c0620065d96b",
-              "targetStep": "/api/3/workflow_steps/920c250b-f729-4e8a-9c5b-e872a62cca47"
+              "sourceStep": "/api/3/workflow_steps/f2b4bc66-1013-4917-8f34-682465f7efd5",
+              "targetStep": "/api/3/workflow_steps/465bc060-ccba-48ee-9d47-22b5c915f165"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "05b847e6-f68f-4da4-8354-a72e1d61543b",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "6788d34a-1adb-4437-a264-b15db8ab84aa",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "bc9dcc93-9a97-4b1b-9930-613e9c7b8251",
+              "uuid": "ed4c9853-f96a-45f8-9fa0-e9dcc2d9b305",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -1461,7 +1461,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "78dca270-3693-4d7e-a96d-c27767b0fb9a",
+              "uuid": "7eb43ad2-ff86-4ed4-b3e2-3fdd28ccc626",
               "@type": "WorkflowStep",
               "name": "Update Device",
               "description": null,
@@ -1471,20 +1471,20 @@
                 "config": "",
                 "params": {
                   "id": "",
+                  "device_type": "",
                   "name": "",
                   "description": "",
                   "status": "",
                   "site": "",
                   "comments": "",
                   "rack": "",
-                  "tag": [
+                  "tags": [
                     {
                       "name": "string",
                       "slug": "4B4U8cPKO15uGezwyTFlWLXLPvpG",
                       "color": "0030aa"
                     }
                   ],
-                  "device_type": "",
                   "other_fields": ""
                 },
                 "version": "1.0.0",
@@ -1510,26 +1510,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/bc9dcc93-9a97-4b1b-9930-613e9c7b8251",
+          "triggerStep": "/api/3/workflow_steps/ed4c9853-f96a-45f8-9fa0-e9dcc2d9b305",
           "routes": [
             {
-              "uuid": "cbdd6549-36b6-4375-a7e4-7cb513101ba9",
+              "uuid": "c5a05e9e-200c-4750-a519-e3473164f790",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Update Device",
-              "sourceStep": "/api/3/workflow_steps/bc9dcc93-9a97-4b1b-9930-613e9c7b8251",
-              "targetStep": "/api/3/workflow_steps/78dca270-3693-4d7e-a96d-c27767b0fb9a"
+              "sourceStep": "/api/3/workflow_steps/ed4c9853-f96a-45f8-9fa0-e9dcc2d9b305",
+              "targetStep": "/api/3/workflow_steps/7eb43ad2-ff86-4ed4-b3e2-3fdd28ccc626"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "a4f1fb72-33bb-49f8-9969-4a87e7868080",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "7efdda03-9139-4176-9f2c-295b3bf08f71",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "ab08a953-b99f-4f83-97b9-6b8a92a15579",
+              "uuid": "79a20853-00e1-49ed-a1d1-739892497a51",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -1546,7 +1546,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "88d5945d-0edd-42e6-a1d8-a01f02ee2d65",
+              "uuid": "fa1b9db2-5c5b-477b-bc9c-264645c7db2c",
               "@type": "WorkflowStep",
               "name": "Delete Device",
               "description": null,
@@ -1580,26 +1580,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/ab08a953-b99f-4f83-97b9-6b8a92a15579",
+          "triggerStep": "/api/3/workflow_steps/79a20853-00e1-49ed-a1d1-739892497a51",
           "routes": [
             {
-              "uuid": "51d21c98-9536-46c4-82ea-45596d6792b7",
+              "uuid": "ec176e9e-c76a-42e8-9f67-37288c7a5721",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Delete Device",
-              "sourceStep": "/api/3/workflow_steps/ab08a953-b99f-4f83-97b9-6b8a92a15579",
-              "targetStep": "/api/3/workflow_steps/88d5945d-0edd-42e6-a1d8-a01f02ee2d65"
+              "sourceStep": "/api/3/workflow_steps/79a20853-00e1-49ed-a1d1-739892497a51",
+              "targetStep": "/api/3/workflow_steps/fa1b9db2-5c5b-477b-bc9c-264645c7db2c"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "214c6263-9adc-415b-b3fe-d5c2028cffb9",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "46daf298-b347-4661-97ce-a0beb35c6f6e",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "ab6391d6-fc20-499f-8497-95133aadf574",
+              "uuid": "054b31af-42f0-43fb-9c53-3aac91872650",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -1616,7 +1616,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "03789abe-dd28-4986-aeb7-e139f72e5756",
+              "uuid": "d991b9cd-bbf7-453b-8cb2-fc374b83211f",
               "@type": "WorkflowStep",
               "name": "Get Cables List",
               "description": null,
@@ -1658,26 +1658,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/ab6391d6-fc20-499f-8497-95133aadf574",
+          "triggerStep": "/api/3/workflow_steps/054b31af-42f0-43fb-9c53-3aac91872650",
           "routes": [
             {
-              "uuid": "75219e4e-342e-4150-bde6-9bf7e18403fe",
+              "uuid": "b699d227-f4fe-4736-8d25-3732cb86cd76",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Cables List",
-              "sourceStep": "/api/3/workflow_steps/ab6391d6-fc20-499f-8497-95133aadf574",
-              "targetStep": "/api/3/workflow_steps/03789abe-dd28-4986-aeb7-e139f72e5756"
+              "sourceStep": "/api/3/workflow_steps/054b31af-42f0-43fb-9c53-3aac91872650",
+              "targetStep": "/api/3/workflow_steps/d991b9cd-bbf7-453b-8cb2-fc374b83211f"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "7f1a97d5-7a1a-4838-b728-8e66a07f9eeb",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "1af35ff8-fddb-4163-b3aa-65ed1beead87",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "3dccc891-a4b6-4fcc-979b-edaa33e2ec02",
+              "uuid": "8ca1465c-1ee9-48ab-9fb2-e8f70a9bf9f7",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -1694,7 +1694,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "92b588b1-7879-45db-add7-6b6b69d71e72",
+              "uuid": "0f145ee8-1693-481d-b480-7c77a1979207",
               "@type": "WorkflowStep",
               "name": "Get Cable",
               "description": null,
@@ -1728,26 +1728,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/3dccc891-a4b6-4fcc-979b-edaa33e2ec02",
+          "triggerStep": "/api/3/workflow_steps/8ca1465c-1ee9-48ab-9fb2-e8f70a9bf9f7",
           "routes": [
             {
-              "uuid": "f7d642b1-71ea-41e0-a921-556528a883ae",
+              "uuid": "f05c39c1-f060-4309-8ff9-3ddbed405f39",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Cable",
-              "sourceStep": "/api/3/workflow_steps/3dccc891-a4b6-4fcc-979b-edaa33e2ec02",
-              "targetStep": "/api/3/workflow_steps/92b588b1-7879-45db-add7-6b6b69d71e72"
+              "sourceStep": "/api/3/workflow_steps/8ca1465c-1ee9-48ab-9fb2-e8f70a9bf9f7",
+              "targetStep": "/api/3/workflow_steps/0f145ee8-1693-481d-b480-7c77a1979207"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "445383d8-8bb5-44d2-a9fb-b0fa51dbdb6d",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "f1b92adf-f57a-4d88-b869-7d86c35bce3d",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "cc92a676-c359-4dd4-8eef-cab087d7c276",
+              "uuid": "6885c3b3-ff21-4039-be34-646962d6d5f5",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -1764,7 +1764,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "c7b8e8b3-574f-44fd-9dd0-4aecbee9ea06",
+              "uuid": "6c1f3bfe-7546-40c1-8a29-03e892cb77d2",
               "@type": "WorkflowStep",
               "name": "Update Cable",
               "description": null,
@@ -1833,26 +1833,26 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/cc92a676-c359-4dd4-8eef-cab087d7c276",
+          "triggerStep": "/api/3/workflow_steps/6885c3b3-ff21-4039-be34-646962d6d5f5",
           "routes": [
             {
-              "uuid": "a429f9c3-89c7-469c-999f-8547b6dabe04",
+              "uuid": "0c0c8c40-ff97-4e3d-8681-fbe72e2117ae",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Update Cable",
-              "sourceStep": "/api/3/workflow_steps/cc92a676-c359-4dd4-8eef-cab087d7c276",
-              "targetStep": "/api/3/workflow_steps/c7b8e8b3-574f-44fd-9dd0-4aecbee9ea06"
+              "sourceStep": "/api/3/workflow_steps/6885c3b3-ff21-4039-be34-646962d6d5f5",
+              "targetStep": "/api/3/workflow_steps/6c1f3bfe-7546-40c1-8a29-03e892cb77d2"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "48656f88-68d8-4404-85f1-e18f1dd18a28",
-          "collection": "/api/3/workflow_collections/a4f4aee0-3ac1-4ddc-8377-73094df96e1e",
+          "uuid": "9f396201-e9d5-47be-a882-a7fdced4d8ab",
+          "collection": "/api/3/workflow_collections/c2413292-aace-4469-9333-e9e7d8c712fc",
           "steps": [
             {
-              "uuid": "cffd5cb9-498d-46c4-9451-8d4e5b3925be",
+              "uuid": "d5398aa4-3eda-48ab-a757-5bfad787c192",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
@@ -1869,7 +1869,7 @@
               "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
             },
             {
-              "uuid": "ae2f801e-200f-441a-a758-3ab607672da0",
+              "uuid": "148bc26f-1da6-4d86-9ff3-ac41f376cf0e",
               "@type": "WorkflowStep",
               "name": "Delete Cable",
               "description": null,
@@ -1903,16 +1903,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/cffd5cb9-498d-46c4-9451-8d4e5b3925be",
+          "triggerStep": "/api/3/workflow_steps/d5398aa4-3eda-48ab-a757-5bfad787c192",
           "routes": [
             {
-              "uuid": "5fb660c9-a194-412a-a7f7-5629001ae321",
+              "uuid": "bf1c680d-7a2d-4da5-87ea-696fd110c8ea",
               "@type": "WorkflowRoute",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Delete Cable",
-              "sourceStep": "/api/3/workflow_steps/cffd5cb9-498d-46c4-9451-8d4e5b3925be",
-              "targetStep": "/api/3/workflow_steps/ae2f801e-200f-441a-a758-3ab607672da0"
+              "sourceStep": "/api/3/workflow_steps/d5398aa4-3eda-48ab-a757-5bfad787c192",
+              "targetStep": "/api/3/workflow_steps/148bc26f-1da6-4d86-9ff3-ac41f376cf0e"
             }
           ]
         }
